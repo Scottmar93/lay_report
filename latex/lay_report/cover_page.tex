@@ -2,48 +2,37 @@
 % "What you see is what you get".
 \thispagestyle{empty} % 'gobble' pagestyle throws issues with nomencl package. 
 \afterpage{
+%\pagestyle{empty}
+\newgeometry{left = 20mm, right = 20mm, top = 15mm, bottom = 10mm}
+
+\newgeometry{left = 20mm, right = 20mm, top = 30mm, bottom = 30mm}
 \pagestyle{empty}
-\newgeometry{left = 30mm, right = 20mm, top = 15mm, bottom = 10mm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [line width=2mm, oxfordblue]
+($ (current page.south west) + (8mm, 8mm) $)
+rectangle
+($ (current page.north east) + (-8mm, -8mm)$);
+\node[anchor=north west, xshift=10mm, yshift=-10mm] at (current page.north west) {\includegraphics[width=0.3\linewidth]{epsrc_logo}};
+\node[anchor=north east, xshift=-10mm, yshift=-10mm] at (current page.north east) {\includegraphics[width=0.3\linewidth]{infomm_logo_blue}};
+\node[anchor=south west, xshift=10mm, yshift=10mm] at (current page.south west) {\includegraphics[width=0.3\linewidth]{oxford_logo_blue_long}};
+\node[anchor=south east, xshift=-10mm, yshift=10mm] at (current page.south east) {\includegraphics[width=0.3\linewidth]{arm_logo_blue}};
+\end{tikzpicture}
+
 \begin{center}
 
+\Huge{\textbf{EPSRC Centre for Doctoral Training in Industrially Focused Mathematical Modelling}}
+\vfill
 \begin{figure}[h]
 \centering
-\vspace{0.02\paperheight}
-\includegraphics[width=0.3\linewidth]{oxford_logo_blue} \\
-\vspace{0.025\paperheight}
-\includegraphics[width=0.4\linewidth]{infomm_logo_blue} \\ 
-\vspace{0.025\paperheight}
-\includegraphics[width=0.4\linewidth]{arm_logo_blue} \\
+\includegraphics[width=0.7\linewidth]{cover_image}
 \end{figure}
-\begin{Large}
-\rule{\linewidth}{1pt} \\
-\textbf{High performance low precision vectorised arithmetic} \\
-\rule{\linewidth}{1pt}
-\end{Large}
-
-\begin{large}
-Oliver Sheridan-Methven\\
-\href{mailto:oliver.sheridan-methven@maths.ox.ac.uk}{oliver.sheridan-methven@maths.ox.ac.uk} \\
-Mansfield College\\
+\vfill
+\Huge{\textbf{A Kick-ass lay report}}\\
 \vspace{0.02\paperheight}
-September 2020 \\
+\Large{\textbf{Oliver Sheridan-Methven}}
 \vspace{0.02\paperheight}
-\begin{table}[h]
-\center
-\large
-Supervisors: \\
-\vspace{1ex}
-\begin{tabular}{l@{\hskip2cm} r}
- Prof.\,Mike Giles & Oxford \\
- Dr.\,Chris Goodyer        & \arm
-\end{tabular}
-\end{table}
-A thesis submitted for the degree of \\
-\textit{Doctor of Philosophy} \\
-as part of centre for doctoral training in \\
-\textit{Industrially Focused Mathematical Modelling.}\\
-\end{large}
 \end{center}
 \restoregeometry
 }
-\cleardoublepage
+\clearpage
+	
