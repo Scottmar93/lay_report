@@ -1,0 +1,77 @@
+\documentclass[english,12pt]{book}
+\include{preamble}
+
+\begin{document}
+
+\input{cover_page}
+% For proof reading
+%\doublespacing
+
+% Give the prebody numbering.
+%\pagenumbering{roman} 
+%\setcounter{page}{1}
+
+
+% Table of contents page.
+\begin{normalsize}
+	\tableofcontents
+	\clearpage
+%	 List of figures.
+	\listoffigures
+	\markboth{List of figures}{List of figures}
+	\clearpage
+%	 List of tables.
+	\listoftables
+	\markboth{List of tables}{List of tables}
+	\markboth{Contents}{Contents} % Only when we bring in the figurs and tables to follow the contents.
+	\clearpage
+%	 List of things to do.
+	\listoftodos
+	\addcontentsline{toc}{chapter}{Todo list}
+	\markboth{Todo list}{Todo list}
+	\clearpage
+\end{normalsize}
+
+
+% Add in the nice preamble sections.
+\input{acknowledgements}
+\input{abbreviations} 
+\input{abstract}
+
+% new page numbering for the main body.
+\cleardoublepage % Double page as page numbering starts at 1.
+\setcounter{section}{0}
+\pagenumbering{arabic}
+
+% Add in the main sections or chapters of the work.
+\part{Preliminaries}
+\input{introduction}
+\input{previous_work}
+\input{conclusions}
+
+% new page numbering for after the main body.
+%\cleardoublepage % Double page as page numbering starts at I (1).
+%\pagenumbering{Roman}
+
+%\singlespacing
+% Add the bibliography.
+\begin{small}
+	\nocite{*} % publishes any unused references.
+	\bibliography{references}
+\end{small}
+\clearpage
+
+% Add the appendices.
+\appendix
+\input{appendices} % This just gives a nice title for the table of contents.
+% Add in the sections for the appendices here.
+\clearpage
+
+% Make the index.
+\begin{footnotesize}
+	\printindex
+\end{footnotesize}
+\clearpage
+
+\end{document}
+

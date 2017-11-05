@@ -1,0 +1,49 @@
+% The cover page is a designed to look best on A4 and is designed to be a
+% "What you see is what you get".
+\thispagestyle{empty} % 'gobble' pagestyle throws issues with nomencl package. 
+\afterpage{
+\pagestyle{empty}
+\newgeometry{left = 30mm, right = 20mm, top = 15mm, bottom = 10mm}
+\begin{center}
+
+\begin{figure}[h]
+\centering
+\vspace{0.02\paperheight}
+\includegraphics[width=0.3\linewidth]{oxford_logo_blue} \\
+\vspace{0.025\paperheight}
+\includegraphics[width=0.4\linewidth]{infomm_logo_blue} \\ 
+\vspace{0.025\paperheight}
+\includegraphics[width=0.4\linewidth]{arm_logo_blue} \\
+\end{figure}
+\begin{Large}
+\rule{\linewidth}{1pt} \\
+\textbf{High performance low precision vectorised arithmetic} \\
+\rule{\linewidth}{1pt}
+\end{Large}
+
+\begin{large}
+Oliver Sheridan-Methven\\
+\href{mailto:oliver.sheridan-methven@maths.ox.ac.uk}{oliver.sheridan-methven@maths.ox.ac.uk} \\
+Mansfield College\\
+\vspace{0.02\paperheight}
+September 2020 \\
+\vspace{0.02\paperheight}
+\begin{table}[h]
+\center
+\large
+Supervisors: \\
+\vspace{1ex}
+\begin{tabular}{l@{\hskip2cm} r}
+ Prof.\,Mike Giles & Oxford \\
+ Dr.\,Chris Goodyer        & \arm
+\end{tabular}
+\end{table}
+A thesis submitted for the degree of \\
+\textit{Doctor of Philosophy} \\
+as part of centre for doctoral training in \\
+\textit{Industrially Focused Mathematical Modelling.}\\
+\end{large}
+\end{center}
+\restoregeometry
+}
+\cleardoublepage
