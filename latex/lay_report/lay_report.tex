@@ -1,6 +1,11 @@
 \documentclass[english,twoside,12pt]{extarticle}
 \input{preamble}
 
+
+\usepackage{blindtext}
+\blindmathtrue
+
+
 \begin{document}
 
 \input{cover_page}
@@ -73,8 +78,20 @@ Planks constant & $ \hbar $ & $ 6.62\cdot10^{-32} $ & \si{\meter^2.\kilogram.\se
 \label{fig:harris_cartoon}
 \end{figure}
 
-\infommmarginnote{I love these new side bubbles! They're awesome and very helpful.}
+\infommmarginnote[10mm]{I love these new side bubbles! They're awesome and very helpful.}
 \lipsum[1]
+
+\section*{Some crazy maths}
+\blindmathpaper
+
+\section*{Conclusions}
+
+\dummysentences{3}
+
+\begin{myquote}[Caesar, head of the Roman empire.]
+\dummysentences{8}
+\end{myquote}
+
 
 
 % Add in the main sections or chapters of the work.

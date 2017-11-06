@@ -184,8 +184,19 @@
 	\begin{adjustbox}{right, minipage=0.8\paperwidth}\begin{tikzpicture}
 	\fill[cyan,path fading=west] (0,3em) rectangle (\linewidth,1.5em);
 	\end{tikzpicture}\end{adjustbox}}
-%\fancyhead[LE,RO]{}
-\fancyfoot[LE,RO]{\thepage}
+\newcommand{\textoverline}[1]{$\overline{\mbox{#1}}$}
+\fancyfoot[LE]{\textoverline{\underline{\hphantom{\ }\thepage\rule{0pt}{2.0ex}
+			\begin{minipage}[c]{0\linewidth}
+				\rule{0pt}{2.5ex}
+			\end{minipage}
+			\rule{0.8\paperwidth}{0pt}}}}
+\fancyfoot[RO]{\begin{adjustbox}{right, minipage=0.8\paperwidth}
+		\textoverline{\underline{\rule{0pt}{2.0ex} \rule{0.8\paperwidth}{0pt}\thepage \hphantom{\ }			\begin{minipage}[c]{0\linewidth}
+					\rule{0pt}{2.5ex}
+				\end{minipage}}}
+		\end{adjustbox}
+	}
+%\fancyfoot[LE,RO]{\thepage}
 %TODO: Needs nice footers.
 %\fancyfoot[RE]{%
 %	\edef\whichside{\ifoddpage left\else right\fi}
