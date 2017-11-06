@@ -18,6 +18,7 @@
 \keepXColumns % Keeps the X column
 \usepackage{arydshln} % Dashed lines using \hdashline \cdashline
 \usepackage{bbm} % Gives Blackboard fonts.
+\usepackage{blindtext} % Generates dummy maths. cf. lipsum.
 \usepackage{bm} % Bold math symbols.
 \usepackage{calc} % Calculates widths of words. 
 \usepackage{chngcntr} % Changing counters, e.g. with footnotes.
@@ -301,6 +302,9 @@
 
 % Useful for drawing a page border. 
 \usetikzlibrary{calc}
+
+% Enable blind maths. 
+\blindmathtrue
 
 %InFoMM glossary
 \NewDocumentEnvironment{infommitemize}{}{% verticle offset
