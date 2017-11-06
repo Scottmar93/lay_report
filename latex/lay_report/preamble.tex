@@ -71,7 +71,7 @@
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black,anchorcolor=black]{hyperref} % Colour links.
 %%%% Should be loaded after hyperref. %%%%
 \usepackage{cleveref} % Gives smart referencing. %% After Hyperref
-\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash,figurewithin=section,tablewithin=section]{caption} % Caption figures and tables nicely. %% After cleveref.
+\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption} % Caption figures and tables nicely. %% After cleveref.
 \usepackage[left=80mm,right=20mm,top=20mm,bottom=20mm, heightrounded, marginparwidth=70mm, marginparsep=5mm]{geometry} % Use nice margins. Does give a small change in the default page margins. 
 
 
@@ -177,18 +177,14 @@
 %	\fill[cyan,path fading=east] (0,3em) rectangle (\linewidth,1.5em);
 %	\end{tikzpicture}}
 \fancyhead[RE]{%
-	\checkoddpage
-	\edef\whichside{\ifoddpage left\else right\fi}
-	\begin{adjustbox}{\whichside, minipage=0.8\paperwidth}\begin{tikzpicture}
+	\begin{adjustbox}{left, minipage=0.8\paperwidth}\begin{tikzpicture}
 		\fill[cyan,path fading=east] (0,3em) rectangle (\linewidth,1.5em);
 		\end{tikzpicture}\end{adjustbox}}
 \fancyhead[LO]{%
-	\checkoddpage
-	\edef\whichside{\ifoddpage left\else right\fi}
-	\begin{adjustbox}{\whichside, minipage=0.8\paperwidth}\begin{tikzpicture}
+	\begin{adjustbox}{right, minipage=0.8\paperwidth}\begin{tikzpicture}
 	\fill[cyan,path fading=west] (0,3em) rectangle (\linewidth,1.5em);
 	\end{tikzpicture}\end{adjustbox}}
-\fancyhead[LE,RO]{}
+%\fancyhead[LE,RO]{}
 \fancyfoot[LE,RO]{\thepage}
 %TODO: Needs nice footers.
 %\fancyfoot[RE]{%
@@ -231,7 +227,7 @@
 \newmdenv[topline=false,bottomline=false,rightline=false,skipabove=\topsep,skipbelow=\topsep]{siderules}
 
 % For a numbered description. Use inside enumerate, \litem{Something} etc. 
-\newcommand\litem[1]{\item{\textit{#1} \\ \hfill \vspace*{-1.5ex} \\ \indent}}
+\newcommand\litem[1]{\item{\textbf{\underline{{#1}:}}}}
 
 % Nice spacing in lists
 %\setlist{listparindent=\parindent,parsep=1ex} 
@@ -279,7 +275,7 @@
 \usetikzlibrary{shadows} % For shadowed boxes.
 \tikzset{every shadow/.style={opacity=1}} % Shadows given full opacity. 
 
-
+% Temporary environment for the InFoMM side bubble. 
 \NewDocumentEnvironment{mysidenote}{}{% verticle offset
 \noindent
 \begin{minipage}[t]{\linewidth}		\begin{mdframed}[roundcorner=5pt, linecolor=oxfordblue, linewidth=2pt, backgroundcolor=yellow!30, shadow=true,shadowcolor=black,shadowsize=8pt]%
@@ -289,9 +285,23 @@
 \end{minipage}
 }
 
+% The final command for an InFoMM margin bubble. 
 \newcommand{\infommmarginnote}[2][0mm]{\marginnote{\begin{mysidenote}{#2}\end{mysidenote}}[{#1}]}
-%\begin{mdframed}[backgroundcolor=yellow!20] 
-%   	In any right triangle, the area of the square whose side is the hypotenuse is equal to the sum of the areas of the squares whose sides are the two legs.
-%\end{mdframed}
 
+% Useful for drawing a page border. 
 \usetikzlibrary{calc}
+
+%InFoMM glossary
+\NewDocumentEnvironment{infommitemize}{}{% verticle offset
+	\noindent
+	\begin{itemize}[label={\color{cyan}{\textbullet}}]
+		}
+		{%
+	\end{itemize}
+}
+
+%\begin{itemize}[label={\color{cyan}{\textbullet}}]
+%	\litem{Cartoon} A brilliant sketch.
+%	\litem{Lay report} A smaller version of the technical report without all the maths.
+%	\litem{InFoMM} A great way to get a PhD and change the world. 
+%\end{itemize}

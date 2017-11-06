@@ -32,14 +32,50 @@
 \pagenumbering{arabic}
 
 \section{Introduction}
-\lipsum[1]
 \subsection{Background information}
 \infommmarginnote{\dummysentences{5}}
 \lipsum[2]
+
+We can reference loads of useful stuff like \Cref{fig:harris_cartoon,fig:side_cartoon}, and also \Cref{tab:some_useful_values}.
+\begin{table}[htb]
+\centering
+\begin{tabular}{llll}
+Quantity & Name & Value & Units \\ \hline
+Time & Tenure & 12 & \si{\micro\second} \\
+Length & Height & 1.82 & \si{\centi\meter} \\
+Planks constant & $ \hbar $ & $ 6.62\cdot10^{-32} $ & \si{\meter^2.\kilogram.\second^{-1}} \\
+\end{tabular}
+\caption{Some useful values.}
+\label{tab:some_useful_values}
+\end{table}
+
 \subsubsection{Very specific points}
 \lipsum[3]
+\subsubsection*{Glossary of terms}
+
+\begin{infommitemize}
+	\litem{Cartoon} A brilliant sketch.
+	\litem{Lay report} A smaller version of the technical report without all the maths.
+	\litem{InFoMM} A great way to get a PhD and change the world. 
+\end{infommitemize}
+
 \subsubsection*{An odd point}
-\lipsum[4-20]
+\marginnote{
+	\includegraphics[width=\linewidth]{cover_image}
+	\captionof{figure}{He is my favourite cartoonist.}
+	\label{fig:side_cartoon}
+}
+\dummysentences{5}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.7\linewidth]{cover_image}
+\caption{A hillarious S.\,Harris cartoon.}
+\label{fig:harris_cartoon}
+\end{figure}
+
+\infommmarginnote{I love these new side bubbles! They're awesome and very helpful.}
+\lipsum[1]
+
 
 % Add in the main sections or chapters of the work.
 
