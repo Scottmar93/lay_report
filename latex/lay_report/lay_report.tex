@@ -1,5 +1,10 @@
-\documentclass[english,twoside,12pt]{extarticle}
+\documentclass[english,twoside,10pt]{extarticle}
 \input{preamble}
+
+
+\title{FUCK yeah}
+\author{Oliver Sheridan-Methven}
+\coverimage[cover_image] % Specify your own image using [].
 
 \begin{document}
 
@@ -47,8 +52,21 @@ Planks constant & $ \hbar $ & $ 6.62\cdot10^{-32} $ & \si{\meter^2.\kilogram.\se
 \label{tab:some_useful_values}
 \end{table}
 
+
 \subsubsection{Very specific points}
-\lipsum[3]
+\lipsum[75] It's all about \marginnote{
+	\begin{center}
+		\begin{tabular}{lll}
+			 & Value & Units \\ \hline
+			c & $ 3\cdot10^{3} $ & \si{\meter.\second^{-1}} \\
+			$ \hbar $ & $ 6.62\cdot10^{-32} $ & \si{\meter^2.\kilogram.\second^{-1}} \\
+		\end{tabular}
+	\end{center}
+	\captionof{table}{Some physical constants which frequently come in hadny for calculations, although being InFoMM we would always non-dimensionalise.}
+}
+\begin{equation}
+ \norm{\bm{l}}_\infty^4 = \pdv[4]{f}{\bm{g}}\coloneqq x^2 + y^2 = z^2.
+\end{equation}
 
 \subsubsection*{Glossary of terms}
 \addcontentsline{toc}{section}{Glossary} % To add an un-numbered section to the contents. 
@@ -59,21 +77,27 @@ Planks constant & $ \hbar $ & $ 6.62\cdot10^{-32} $ & \si{\meter^2.\kilogram.\se
 	\litem{InFoMM} A great way to get a PhD and change the world. 
 \end{infommitemize}
 
+
+\lipsum[1]
+
 \subsubsection*{An odd point}
 \marginnote{
 	\includegraphics[width=\linewidth]{cover_image}
 	\captionof{figure}{He is my favourite cartoonist.}
-	\label{fig:side_cartoon}
-}
-\dummysentences{5}
+	\label{fig:side_cartoon}}
+\lipsum[1]
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.7\linewidth]{cover_image}
-\caption{A hillarious S.\,Harris cartoon.}
+\caption{A hillarious S.\,Harris cartoon. Here $ e = mc^2 $ or $ \bm{e = mc^2}$.}
 \label{fig:harris_cartoon}
-\end{figure} \\
-\infommmarginnote[10mm]{I love these new side bubbles! They're awesome and very helpful.}
+\end{figure} 
+
+\infommmarginnote[10mm]{I love these new side bubbles! They're awesome and very helpful.
+	$$ \int_{\mathbb{R}}^{\infty^+} f(z) \dd(z)  = 0
+	$$}
 \lipsum[1]
+
 
 \section*{Some crazy maths}
 \blindmathpaper
@@ -81,7 +105,7 @@ Planks constant & $ \hbar $ & $ 6.62\cdot10^{-32} $ & \si{\meter^2.\kilogram.\se
 \section*{Conclusions}
 \dummysentences{3}
 \begin{myquote}[Caesar, head of the Roman empire.]
-\dummysentences{8}
+\lipsum[66]
 \end{myquote}
 
 % Add the bibliography.

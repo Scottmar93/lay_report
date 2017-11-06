@@ -9,6 +9,8 @@
 %	all of which combine to make very nice LaTeX
 %	documents. 
 
+
+
 \usepackage{adjustbox} % Nice alternative to minipage.
 \usepackage{afterpage} % To give the title page its own geometry.
 \usepackage{amsmath} % Nice maths symbols.
@@ -19,14 +21,12 @@
 \usepackage{arydshln} % Dashed lines using \hdashline \cdashline
 \usepackage{bbm} % Gives Blackboard fonts.
 \usepackage{blindtext} % Generates dummy maths. cf. lipsum.
-\usepackage{bm} % Bold math symbols.
 \usepackage{calc} % Calculates widths of words. 
 \usepackage{chngcntr} % Changing counters, e.g. with footnotes.
 \usepackage[nostamp]{draftwatermark} % Gives a draft overlay. Use options [nostamp] or [final].
 \usepackage{emptypage} % Empty pages have no headers and footers.
 \usepackage{enumitem} % Nice listing options in itemize and enumerate.
 \usepackage{esdiff} % Gives nice differential operators.
-\usepackage{esvect} % Gives nice vector arrows.
 \usepackage{fancyhdr} % Nice headers.
 \usepackage{float} % Nice figure placement.
 \usepackage[T1]{fontenc} % Nice range of text characters and accents.
@@ -38,8 +38,7 @@
 \usepackage{indentfirst} % Indents the first paragraph.
 \usepackage{letltxmacro} % For defining a nice SQRT symbol.
 \usepackage{lipsum} % Useful for adding jargon.
-%\usepackage{listings} % The listings package for code.
-\usepackage{lmodern} % Load a font with all the characters
+\usepackage{listings} % The listings package for code.
 \usepackage{marginnote} % For nice margin notes.
 \usepackage{mathtools} % Gives the colon equals symbol.
 %\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode} % Inports Listings package ideal for MATLAB.
@@ -47,6 +46,10 @@
 \usepackage{multirow} % Nice table cells spanning many rows.
 \usepackage{multicol} % If I want to use multiple columns.
 \usepackage[numbers, sort&compress]{natbib} % Nice references.
+\usepackage{sansmath} % Gives a changing math font. %% Must be before newpxtext/newpxmath ! %%
+\usepackage{newpxtext} % Gives Palatino and Helvetica fonts.
+\usepackage{newpxmath} % Gives Palatino and Helvetica fonts in maths. 
+\usepackage{bm} % Bold math symbols. %% Needs to be loaded after newpxtext/math. %%
 \usepackage{nicefrac} % Gives nice fractions for superscripts.
 \usepackage{nomencl} % Gives a symbol nomenclature. 
 \usepackage[super]{nth} % Gives nice ordinal superscripts, eg 1st, 2nd, etc.
@@ -61,10 +64,9 @@
 \usepackage{subcaption} % Side by side figures.
 \usepackage[textsize=tiny]{todonotes} % A nice TODO list. [disable] to supress.
 \usepackage{tikz} % Nice diagrams.
+\usepackage{titling} % Access title variables. 
 \usepackage[nottoc]{tocbibind} % Gives nices Table of Contents
-%\usepackage[table]{xcolor} % This is useful for making greyed table cells, nice for headers. Known preamble placement issues.
-\usepackage{wasysym} % Gives some nice misc symbols, such as markers.
-\usepackage{xcolor} % Nice colours for shading. 
+\usepackage{xcolor} % This is useful for making greyed table cells, nice for headers. Known preamble placement issues.
 \usepackage{xifthen}% Provides \isempty test.
 \usepackage{xparse} % Gives \NewDocumentEnvironment which has nice optional argument handling.
 \usepackage{xspace} % Gives nice spacing for commands.
@@ -72,7 +74,7 @@
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black,anchorcolor=black]{hyperref} % Colour links.
 %%%% Should be loaded after hyperref. %%%%
 \usepackage{cleveref} % Gives smart referencing. %% After Hyperref
-\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption} % Caption figures and tables nicely. %% After cleveref.
+\usepackage[margin=10pt,font=small, textfont=bf,labelfont=bf,labelsep=endash]{caption} % Caption figures and tables nicely. %% After cleveref.
 \usepackage[left=80mm,right=20mm,top=20mm,bottom=20mm, heightrounded, marginparwidth=70mm, marginparsep=5mm]{geometry} % Use nice margins. Does give a small change in the default page margins. 
 
 
@@ -155,7 +157,7 @@
 
 % Number equations down to the subection level, e.g. 1.2.3 is the third equation in
 % subsection 2 of section 1.
-\numberwithin{equation}{section}
+%\numberwithin{equation}{section}
 \newcommand*\tageq{\refstepcounter{equation}\tag{\theequation}}
 
 % This makes the footnote counter reset in each section.
@@ -298,7 +300,7 @@
 }
 
 % The final command for an InFoMM margin bubble. 
-\newcommand{\infommmarginnote}[2][0mm]{\marginnote{\begin{mysidenote}{#2}\end{mysidenote}}[{#1}]}
+\newcommand{\infommmarginnote}[2][0mm]{\marginnote{\sffamily{}\sansmath\begin{mysidenote}{#2}\end{mysidenote}}[{#1}]}
 
 % Useful for drawing a page border. 
 \usetikzlibrary{calc}
@@ -315,8 +317,6 @@
 	\end{itemize}
 }
 
-%\begin{itemize}[label={\color{cyan}{\textbullet}}]
-%	\litem{Cartoon} A brilliant sketch.
-%	\litem{Lay report} A smaller version of the technical report without all the maths.
-%	\litem{InFoMM} A great way to get a PhD and change the world. 
-%\end{itemize}
+\newcommand{\coverimage}[1][cover_image]{
+	\newcommand{\thecoverimage}{#1}
+}
