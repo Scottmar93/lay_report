@@ -1,6 +1,17 @@
 \documentclass[english,twoside,10pt]{extarticle}
 \input{preamble}
+	
+\usepackage{titlesec}
 
+\titleformat{\section}
+{\color{oxfordblue}\normalfont\Large\bfseries}
+{\color{oxfordblue}\thesection}{1em}{}
+\titleformat{\subsection}
+{\color{blue}\normalfont\Large\bfseries}
+{\color{blue}\thesection}{1em}{}
+\titleformat{\subsubsection}
+{\color{cyan}\normalfont\Large\bfseries}
+{\color{cyan}\thesection}{1em}{}
 
 \title{FUCK yeah}
 \author{Oliver Sheridan-Methven}
@@ -19,6 +30,9 @@
 
 % Table of contents page.
 \afterpage{
+	\titleformat{\section}
+	{\color{black}\normalfont\Large\bfseries}
+	{\color{black}\thesection}{1em}{}
 \pagestyle{empty}
 \newgeometry{left=110mm,right=20mm,top=20mm,bottom=20mm, heightrounded, marginparwidth=100mm, marginparsep=5mm}
 \reversemarginpar
@@ -102,7 +116,7 @@ Planks constant & $ \hbar $ & $ 6.62\cdot10^{-32} $ & \si{\meter^2.\kilogram.\se
 \section*{Some crazy maths}
 \blindmathpaper
 
-\section*{Conclusions}
+\section*{Conclusions, Recommendations, \& Further Work}
 \dummysentences{3}
 \begin{myquote}[Caesar, head of the Roman empire.]
 \lipsum[66]
