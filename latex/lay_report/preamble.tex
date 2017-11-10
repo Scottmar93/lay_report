@@ -41,7 +41,7 @@
 \usepackage{listings} % The listings package for code.
 \usepackage{marginnote} % For nice margin notes.
 \usepackage{mathtools} % Gives the colon equals symbol.
-%\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode} % Inports Listings package ideal for MATLAB.
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode} % Inports Listings package ideal for MATLAB.
 \usepackage[framemethod=tikz]{mdframed} % Gives nices boxed and sidesrules.
 \usepackage{multirow} % Nice table cells spanning many rows.
 \usepackage{multicol} % If I want to use multiple columns.
@@ -104,7 +104,17 @@
 \setlength{\bibsep}{0pt plus 0.3ex}
 
 % Listing -> Code in environment labels.
-%\renewcommand{\lstlistingname}{Code}
+\renewcommand{\lstlistingname}{Code}
+\crefname{listing}{code}{codes}
+\Crefname{listing}{Code}{Codes}
+\lstset{
+	numbers=left, 
+	basicstyle=\ttfamily\footnotesize,
+	frame=single, % adds a frame around the code
+	xleftmargin=20.4pt,
+	xrightmargin=3.4pt,
+%	numbersep=3mm,
+}
 
 % Nice paragraph indents.
 \setlength{\parindent}{15mm}
@@ -189,17 +199,30 @@
 	\fill[yellow!20,path fading=east] (0,3em) rectangle (0.3\linewidth,1.5em);
 	\end{tikzpicture}\end{adjustbox}}
 \newcommand{\textoverline}[1]{$\overline{\mbox{#1}}$}
-\fancyfoot[LE]{\textoverline{\underline{\hphantom{\ }\thepage\rule{0pt}{2.0ex}
+\fancyfoot[LE]{\begin{adjustbox}{left, minipage=\paperwidth}
+		\raggedright
+		\textoverline{\underline{\hphantom{\ }\thepage
+				\begin{minipage}[c]{0\linewidth}
+					\rule{0pt}{2.5ex}
+				\end{minipage}
+				\rule{0.8\linewidth}{0pt}\rule{0pt}{2.0ex}}}
+	\end{adjustbox}
+}
+\fancyfoot[RO]{\begin{adjustbox}{right, minipage=\paperwidth}
+		\raggedleft
+	\textoverline{\underline{
 			\begin{minipage}[c]{0\linewidth}
 				\rule{0pt}{2.5ex}
 			\end{minipage}
-			\rule{0.8\paperwidth}{0pt}}}}
-\fancyfoot[RO]{\begin{adjustbox}{right, minipage=0.8\paperwidth}
-		\textoverline{\underline{\rule{0pt}{2.0ex} \rule{0.8\paperwidth}{0pt}\thepage \hphantom{\ }			\begin{minipage}[c]{0\linewidth}
-					\rule{0pt}{2.5ex}
-				\end{minipage}}}
-		\end{adjustbox}
+			\rule{0.8\linewidth}{0pt}\rule{0pt}{2.0ex}\thepage\hphantom{\ }}}
+	\end{adjustbox}
 	}
+%\fancyfoot[RO]{\begin{adjustbox}{right, minipage=0.8\paperwidth}
+%		\textoverline{\underline{\rule{0pt}{2.0ex} \rule{0.8\paperwidth}{0pt}\thepage \hphantom{\ }			\begin{minipage}[c]{0\linewidth}
+%					\rule{0pt}{2.5ex}
+%				\end{minipage}}}
+%		\end{adjustbox}
+%	}
 %\fancyfoot[LE,RO]{\thepage}
 %TODO: Needs nice footers.
 %\fancyfoot[RE]{%
@@ -312,7 +335,7 @@
 %InFoMM glossary
 \NewDocumentEnvironment{infommitemize}{}{% verticle offset
 	\noindent
-	\begin{itemize}[label={\color{cyan}{\textbullet}}]
+	\begin{itemize}[label={\color{cyan}{$\blacksquare$}}]
 		}
 		{%
 	\end{itemize}
