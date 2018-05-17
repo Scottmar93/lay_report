@@ -34,6 +34,7 @@
 \usepackage{graphicx} % Include figures.
 \usepackage[notquote]{hanging} % For indenting later lines in a paragraph. USE the 'noquote' option else the `'` is overwritten, and breaks in maths mode!
 \usepackage{ifoddpage} % Checks for odd or even page.
+\usepackage[geometry]{ifsym} % Useful symbols.
 \usepackage{imakeidx} % Makes the index.
 \usepackage{indentfirst} % Indents the first paragraph.
 \usepackage{letltxmacro} % For defining a nice SQRT symbol.
@@ -65,6 +66,7 @@
 \usepackage[textsize=tiny]{todonotes} % A nice TODO list. [disable] to supress.
 \usepackage{tikz} % Nice diagrams.
 \usepackage{titling} % Access title variables. 
+\usepackage{titlesec} % Nice section title colouring options.
 \usepackage[nottoc]{tocbibind} % Gives nices Table of Contents
 \usepackage{xcolor} % This is useful for making greyed table cells, nice for headers. Known preamble placement issues.
 \usepackage{xifthen}% Provides \isempty test.
@@ -75,7 +77,7 @@
 %%%% Should be loaded after hyperref. %%%%
 \usepackage{cleveref} % Gives smart referencing. %% After Hyperref
 \usepackage[margin=10pt,font=small, textfont=bf,labelfont=bf,labelsep=endash]{caption} % Caption figures and tables nicely. %% After cleveref.
-\usepackage[left=80mm,right=20mm,top=20mm,bottom=20mm, heightrounded, marginparwidth=70mm, marginparsep=5mm]{geometry} % Use nice margins. Does give a small change in the default page margins. 
+\usepackage[left=70mm,right=20mm,top=20mm,bottom=20mm, heightrounded, marginparwidth=60mm, marginparsep=5mm]{geometry} % Use nice margins. Does give a small change in the default page margins. 
 
 
 % Ensures subsubsections are numbered.
@@ -237,7 +239,7 @@
 
 
 % Make margin notes small
-\renewcommand*{\marginfont}{\noindent \large}
+\renewcommand*{\marginfont}{\noindent \small}
 \reversemarginpar % If I want a wider margin by the binding.
 % Ensuring nice justification.
 \renewcommand\raggedrightmarginnote{\sloppy}
@@ -322,7 +324,7 @@
 }
 
 % The final command for an InFoMM margin bubble. 
-\newcommand{\infommmarginnote}[2][0mm]{\marginnote{\sffamily{}\sansmath\begin{mysidenote}{#2}\end{mysidenote}}[{#1}]}
+\newcommand{\infommmarginnote}[2][0mm]{\marginnote{\large\sffamily{}\sansmath\begin{mysidenote}{#2}\end{mysidenote}}[{#1}]}
 
 % Useful for drawing a page border. 
 \usetikzlibrary{calc}
@@ -342,3 +344,14 @@
 \newcommand{\coverimage}[1][cover_image]{
 	\newcommand{\thecoverimage}{#1}
 }
+
+% Nice colouring of section titles
+\titleformat{\section}
+{\color{oxfordblue}\normalfont\Large\bfseries}
+{\color{oxfordblue}\thesection}{1em}{}
+\titleformat{\subsection}
+{\color{cyan}\normalfont\Large\bfseries}
+{\color{cyan}\thesection}{1em}{}
+\titleformat{\subsubsection}
+{\color{cyan}\normalfont\Large\bfseries}
+{\color{cyan}\thesection}{1em}{}
