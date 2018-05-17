@@ -1,0 +1,19 @@
+% Table of contents page.
+\afterpage{
+	\titleformat{\section}
+	{\color{black}\normalfont\Large\bfseries}
+	{\color{black}\thesection}{1em}{}
+\pagestyle{empty}
+\newgeometry{left=110mm,right=20mm,top=20mm,bottom=20mm, heightrounded, marginparwidth=100mm, marginparsep=5mm}
+\reversemarginpar
+\noindent
+\begin{minipage}[t]{\linewidth}
+\tableofcontents
+\end{minipage} \\
+\marginpar{\includegraphics[width=\linewidth]{andrew_wiles_building}}
+\clearpage
+}
+
+\cleardoublepage % Double page as page numbering starts at 1.
+\setcounter{section}{0}
+\pagenumbering{arabic}
