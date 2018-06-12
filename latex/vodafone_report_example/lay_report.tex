@@ -1,4 +1,4 @@
-\documentclass[english,oneside,9pt]{extarticle}
+\documentclass[english,a4paper,oneside,9pt]{extarticle}
 \input{preamble}
 
 \title{Herding top percentiles}
@@ -47,7 +47,7 @@ Our aim is to increase the classification accuracy in this top percentile, impro
 
 
 
-\infommmarginnote[2em]{For machine learning, data-set is split into a training, validation, and prediction set.}
+\infommmarginnote[0em]{For machine learning, data-set is split into a training, validation, and prediction set.}
 Machine learning algorithms must be provided with data. The overall data-set is correspondingly split into three distinct and non-overlapping sets: \textit{training}, \textit{validation}, and \textit{prediction}. The training set is what we provide to the algorithm to learn from. After a learner is trained, we assess its performance on the validation set. Validation identifies learners which may have over-fit the training set, or generalise poorly to unseen data. Depending on the results from the validation stage, we may revisit the algorithm, and iterate several times between training and validation. After this, we should know how the algorithms expect to perform, their robustness, and how they compare. 
 
 The marker we use to identify whether a customer should be offered a promotion is if they churned within 3 months. Hence, to create a predictive model, a learner must be trained on data which are at least 3 months old. The temporal structure of the data is presented in \Cref{fig:temporal_distribution_of_samples}. Each customer is a sample in this data-set. The samples from March 2017 form the prediction set. To keep the validation set representative of the prediction set, 400,000 samples were taken from December 2016 for validation. The training set consisted of the 397,028 samples remaining from 2016.
@@ -141,7 +141,7 @@ After all the rounds of validation, we finally use the best performing algorithm
 
 Immediately we notice that these accuracies are all much lower than the 45--50\% expected from the validation set results.  However, given the temporal segregation of the data from \Cref{fig:temporal_distribution_of_samples}, it is not unreasonable to attribute this to an inherently more difficult data-set. We notice that XGBoost using SMOTE gives a worse performance than without, and AdaCost is appreciably worse than AdaBoost. However, AdaBoost with its imbalanced ensemble does achieve a competitive accuracy compared with XGBoost, which is as expected. Furthermore, we see AdaBoost shows a smaller variation than XGBoost.
 
-\section{Discussion, conclusions, and recommendations}
+\section{Discussion, conclusions, \& recommendations}
 
 We have considered the problem of classifying churning Vodafone customers which is a percentile herding task with an underlying data imbalance. To tackle these challenges, we have investigated data processing and feature reduction, resampling methods, and boosting algorithms. 
 
@@ -158,9 +158,9 @@ As a consequence of these findings, we would promote exploring SMOTE when develo
 
 The challenges caused by imbalanced data, and the task of herding top percentiles, is a ubiquitous and pervasive problem frequently encountered across many areas of Vodafone's business. Having a better knowledge of approaches to tackle these difficulties, from processing the data to ensemble methods, presents many opportunities for an improved quality of service which can be passed onto Vodafone's customers. 
 
-\begin{myquote}[Dr Uwe Bombosch\\Lead data scientist at Vodafone Germany]
-Finding a top quantile with a high true positive rate is a ubiquitous problem in our business, in fact more wide-spread than a good overall classification. The outcome of the InFoMM mini-project can immediately be applied to several machine learning models we are building for marketing and customer satisfaction campaigns. SMOTE, for instance, has already found its way into a campaign channel optimisation. In addition to the insights, we also received a package of well-written code for our toolbox. When applying for a mini-project, I expected the highest level of maths, but was surprised by the IT-literacy and the hands-on approach. I clearly recommend InFoMM projects as a source of inspiration to data science organisations.
-\end{myquote}
+Dr Uwe Bombosch, the lead data scientist at Vodafone Germany said:
+``\emph{Finding a top quantile with a high true positive rate is a ubiquitous problem in our business, in fact more wide-spread than a good overall classification. The outcome of the InFoMM mini-project can immediately be applied to several machine learning models we are building for marketing and customer satisfaction campaigns. SMOTE, for instance, has already found its way into a campaign channel optimisation. In addition to the insights, we also received a package of well-written code for our toolbox. When applying for a mini-project, I expected the highest level of maths, but was surprised by the IT-literacy and the hands-on approach. I clearly recommend InFoMM projects as a source of inspiration to data science organisations.}''
+
 
 \clearpage
 \end{document}

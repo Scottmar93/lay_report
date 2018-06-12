@@ -1,4 +1,4 @@
-\documentclass[english,twoside,10pt]{extarticle}
+\documentclass[english,a4,oneside,9pt]{extarticle}
 \input{preamble}
 
 \title{Mini-project lay report}
@@ -35,7 +35,12 @@ We can reference loads of useful stuff like \Cref{fig:harris_cartoon,fig:side_ca
 
 
 \subsubsection{Very specific points}
-\lipsum[75] It's all about \marginnote{
+\todo{In the margin I can mention something I need to do.}
+\lipsum[75]
+\todo[inline=true]{Incase I need to highlight something I need to do.}
+
+
+It's all  about \marginnote{
 	\begin{center}
 		\begin{tabular}{lll}
 			 & Value & Units \\ \hline
@@ -63,17 +68,19 @@ We can reference loads of useful stuff like \Cref{fig:harris_cartoon,fig:side_ca
 \lipsum[1]
 
 \subsubsection*{An odd point}
-\marginnote{
-	\includegraphics[width=\linewidth]{cover_image}
-	\captionof{figure}{He is my favourite cartoonist.}
-	\label{fig:side_cartoon}}
-\lipsum[1]
+
 \begin{figure}[htb]
+\marginnote{
+    \includegraphics[width=\linewidth]{cover_image}
+    \captionof{figure}{He is my favourite cartoonist.}
+    \label{fig:side_cartoon}}
 \centering
 \includegraphics[width=0.7\linewidth]{cover_image}
 \caption{A hilarious S.\,Harris cartoon. Here $ e = mc^2 $ or $ \bm{e = mc^2}$.}
 \label{fig:harris_cartoon}
 \end{figure} 
+
+\lipsum[1]
 
 \infommmarginnote[3mm]{I love these side bubbles! They're awesome and very helpful.
 	$$ \int_{\mathbb{R}}^{\infty^+} f(z) \dd(z)  = 0
@@ -84,6 +91,8 @@ We can reference loads of useful stuff like \Cref{fig:harris_cartoon,fig:side_ca
 \section*{Some crazy maths}
 
 \Cref{code:example} is a nice example of using Python rather than Matlab.
+
+\begin{lstfloat}[htb]
 \begin{lstlisting}[language=Python, caption={[Example prime number generator]Some example python code, incase we wanted to show the company some awesome programming idea.}, label={code:example}, captionpos=b]
 def prime_numbers():
 	"""
@@ -107,19 +116,33 @@ def prime_numbers():
 				primes.append(x)
 				yield x
 \end{lstlisting}
+\end{lstfloat}
 
 \blindmathpaper
 
-\section*{Conclusions, Recommendations, and Further Work}
+\section*{Discussion, conclusions \& recommendations}
 \dummysentences{3}
+
+For general quotes use:
 \begin{myquote}[Caesar, head of the Roman empire.]
 \lipsum[66]
 \end{myquote}
+
+While for the final company quote use:
+
+[Insert name], [Job title + company] said: ``\emph{\dummysentences{5}}''
 
 % Add the bibliography.
 \begin{small}
 	\nocite{*} % Publishes any unused references.
 	\bibliography{references}
 \end{small}
+
+\section{COMMENTS ON THE REPORT}
+For the \textbf{final} editing:
+\begin{itemize}
+    \item Ensure the side bubbles are correctly centred and don't spill over any pages. 
+    \item Ensure there are no dangling headers (This might require inserting a \verb|\clearpage| command.)
+\end{itemize}
 \clearpage
 \end{document}

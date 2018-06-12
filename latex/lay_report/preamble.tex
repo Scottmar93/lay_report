@@ -63,7 +63,7 @@
 \usepackage{siunitx} % Nice formating of units.
 \usepackage{sidenotes} % Nice margin figures and margin tables. 
 \usepackage{subcaption} % Side by side figures.
-\usepackage[textsize=tiny]{todonotes} % A nice TODO list. [disable] to supress.
+\usepackage[textsize=small]{todonotes} % A nice TODO list. [disable] to supress.
 \usepackage{tikz} % Nice diagrams.
 \usepackage{titling} % Access title variables. 
 \usepackage{titlesec} % Nice section title colouring options.
@@ -77,7 +77,7 @@
 %%%% Should be loaded after hyperref. %%%%
 \usepackage{cleveref} % Gives smart referencing. %% After Hyperref
 \usepackage[margin=10pt,font=small, textfont=bf,labelfont=bf,labelsep=endash]{caption} % Caption figures and tables nicely. %% After cleveref.
-\usepackage[left=70mm,right=20mm,top=20mm,bottom=20mm, heightrounded, marginparwidth=60mm, marginparsep=5mm]{geometry} % Use nice margins. Does give a small change in the default page margins. 
+\usepackage[left=62mm,right=28mm,top=20mm,bottom=18mm, heightrounded, marginparwidth=43mm, marginparsep=8mm]{geometry} % Use nice margins. Does give a small change in the default page margins. 
 
 
 % Ensures subsubsections are numbered.
@@ -110,16 +110,17 @@
 \crefname{listing}{code}{codes}
 \Crefname{listing}{Code}{Codes}
 \lstset{
-	numbers=left, 
-	basicstyle=\ttfamily\footnotesize,
-	frame=single, % adds a frame around the code
-	xleftmargin=20.4pt,
-	xrightmargin=3.4pt,
-%	numbersep=3mm,
+    numbers=left, 
+    basicstyle=\ttfamily\footnotesize,
+    frame=single, % adds a frame around the code
+    xleftmargin=20.4pt,
+    xrightmargin=3.4pt,
+    %	numbersep=3mm,
 }
+\newfloat{lstfloat}{htbp}{lop} % environment for placing lisings in to make them float. 
 
 % Nice paragraph indents.
-\setlength{\parindent}{15mm}
+\setlength{\parindent}{0mm}
 
 % Giving the references the right title.
 \renewcommand{\bibname}{References}
@@ -133,9 +134,9 @@
 \hbadness=10000
 
 % To change the spacing in lists:
-\setlist{noitemsep} % or \setlist{noitemsep} to leave space around whole list
+%\setlist{noitemsep} % or \setlist{noitemsep} to leave space around whole list
 % or
-%\setenumerate{itemsep=-0.4em,topsep=0.5em} % Seems to look nice.
+\setenumerate{itemsep=-0.2em,topsep=0.5em} % Seems to look nice.
 
 % Custom column widths using C{2cm}, L, R, etc.
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -154,10 +155,10 @@
 \makeatletter
 \let\oldr@@t\r@@t
 \def\r@@t#1#2{%
-\setbox0=\hbox{$\oldr@@t#1{#2\,}$}\dimen0=\ht0
-\advance\dimen0-0.2\ht0
-\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
-{\box0\lower0.4pt\box2}}
+    \setbox0=\hbox{$\oldr@@t#1{#2\,}$}\dimen0=\ht0
+    \advance\dimen0-0.2\ht0
+    \setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+    {\box0\lower0.4pt\box2}}
 \LetLtxMacro{\oldsqrt}{\sqrt}
 \renewcommand*{\sqrt}[2][\ ]{\oldsqrt[#1]{#2}}
 \makeatother
@@ -188,52 +189,48 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
+\newlength{\oneinch}
+\setlength\oneinch{1in}
+\newlength{\innermarginonesided}
+\setlength\innermarginonesided{\IfBooleanTF{@twoside}{\evensidemargin+1in}{\paperwidth-\textwidth-\oddsidemargin-1in}}
+
 \fancyhead[RE]{%
-	\begin{adjustbox}{left, minipage=0.8\paperwidth}\begin{tikzpicture}
-		\fill[cyan,path fading=east] (0,3em) rectangle (\linewidth,1.5em);
-		\fill[yellow!50,path fading=west] (0.7\linewidth,3em) rectangle (\linewidth,1.5em);
-		\end{tikzpicture}\end{adjustbox}}
+    \begin{adjustbox}{left, minipage=0.9\paperwidth}
+        \hspace*{-0.8\innermarginonesided}
+        \begin{tikzpicture}
+        \fill[cyan,path fading=east] (0,3em) rectangle (\linewidth,1.5em);
+        \fill[yellow!60,path fading=west] (0.6\linewidth,3em) rectangle (\linewidth,1.5em);
+        \end{tikzpicture}\end{adjustbox}}
 \fancyhead[LO]{%
-	\begin{adjustbox}{right, minipage=0.8\paperwidth}\begin{tikzpicture}
-	\fill[cyan,path fading=west] (0,3em) rectangle (\linewidth,1.5em);
-	\fill[yellow!50,path fading=east] (0,3em) rectangle (0.3\linewidth,1.5em);
-	\end{tikzpicture}\end{adjustbox}}
+    \begin{adjustbox}{right, minipage=0.9\paperwidth}
+        \hspace*{0.8\innermarginonesided}
+        \begin{tikzpicture}
+        \fill[cyan,path fading=west] (0,3em) rectangle (\linewidth,1.5em);
+        \fill[yellow!60,path fading=east] (0,3em) rectangle (0.4\linewidth,1.5em);
+        \end{tikzpicture}\end{adjustbox}}
 \newcommand{\textoverline}[1]{$\overline{\mbox{#1}}$}
-\fancyfoot[LE]{\begin{adjustbox}{left, minipage=\paperwidth}
-		\raggedright
-		\textoverline{\underline{\hphantom{\ }\thepage
-				\begin{minipage}[c]{0\linewidth}
-					\rule{0pt}{2.5ex}
-				\end{minipage}
-				\rule{0.8\linewidth}{0pt}\rule{0pt}{2.0ex}}}
-	\end{adjustbox}
+% The footers are specified but are not the same margin widths as the headers. 
+\fancyfoot[LE]{\hspace*{-0.5\innermarginonesided}\begin{adjustbox}{left, minipage=0.9\paperwidth}
+        \raggedright
+        \color{cyan}\textoverline{\color{black}\underline{\hphantom{\ }\thepage
+                \begin{minipage}[c]{0\linewidth}
+                    \rule{0pt}{2.5ex}
+                \end{minipage}
+                \rule{0.9\linewidth}{0pt}\rule{0pt}{2.0ex}}}
+    \end{adjustbox}
 }
-\fancyfoot[RO]{\begin{adjustbox}{right, minipage=\paperwidth}
-		\raggedleft
-	\textoverline{\underline{
-			\begin{minipage}[c]{0\linewidth}
-				\rule{0pt}{2.5ex}
-			\end{minipage}
-			\rule{0.8\linewidth}{0pt}\rule{0pt}{2.0ex}\thepage\hphantom{\ }}}
-	\end{adjustbox}
-	}
-%\fancyfoot[RO]{\begin{adjustbox}{right, minipage=0.8\paperwidth}
-%		\textoverline{\underline{\rule{0pt}{2.0ex} \rule{0.8\paperwidth}{0pt}\thepage \hphantom{\ }			\begin{minipage}[c]{0\linewidth}
-%					\rule{0pt}{2.5ex}
-%				\end{minipage}}}
-%		\end{adjustbox}
-%	}
-%\fancyfoot[LE,RO]{\thepage}
-%TODO: Needs nice footers.
-%\fancyfoot[RE]{%
-%	\edef\whichside{\ifoddpage left\else right\fi}
-%	\begin{adjustbox}{\whichside, minipage=0.8\paperwidth}\rule{0.8\paperwidth}{1pt}\thepage\end{adjustbox}}
-%\fancyfoot[LO]{%
-%	\edef\whichside{\ifoddpage left\else right\fi}
-%	\begin{adjustbox}{\whichside, minipage=0.8\paperwidth}\rule{0.8\paperwidth}{1pt}\thepage\end{adjustbox}}
+\fancyfoot[RO]{\hspace*{0.5\innermarginonesided}\begin{adjustbox}{right, minipage=0.9\paperwidth}
+        \raggedleft
+        \color{cyan}\textoverline{\color{black}\underline{
+                \begin{minipage}[c]{0\linewidth}
+                    \rule{0pt}{2.5ex}
+                \end{minipage}
+                \rule{0.9\linewidth}{0pt}\rule{0pt}{2.0ex}\thepage\hphantom{\ }}}
+    \end{adjustbox}
+}
 \fancypagestyle{plain}{%
-\fancyhf{}%
-\renewcommand*{\headrulewidth}{0pt}%
+    \fancyhf{}%
+    \renewcommand*{\headrulewidth}{0pt}%
 }
 \cfoot{}
 
@@ -247,18 +244,18 @@
 
 % Gives a nice quote environment.
 \NewDocumentEnvironment{myquote}{O{}}{%
-\begin{center}
-\begin{minipage}{0.85\linewidth}
-\vspace{1ex}
-\centering \itshape \justifying}
-{%
-\ifthenelse{\isempty{#1}}{}{
-\begin{flushright}%The author/source.
-\normalfont #1
-\end{flushright}}
-\vspace{1ex}
-\end{minipage}
-\end{center}
+    \begin{center}
+        \begin{minipage}{0.85\linewidth}
+            \vspace{1ex}
+            \centering \itshape \justifying}
+        {%
+            \ifthenelse{\isempty{#1}}{}{
+                \begin{flushright}%The author/source.
+                    \normalfont #1
+            \end{flushright}}
+            \vspace{1ex}
+        \end{minipage}
+    \end{center}
 }
 
 % Gives a nice siderule environment. e.g. \begin{siderules}
@@ -275,13 +272,13 @@
 
 % Gives a nice aligned figure environment, where figures are flush to the inner margin overflowing off the outer margin first. Useful for very wide figures, or set of lots of sub figures. 
 \NewDocumentEnvironment{myalignedfigure}{O{1.3} O{htb}}{% fractional_linewidth,  position
-\begin{figure}[#2]
-\checkoddpage
-\edef\whichside{\ifoddpage left\else right\fi}
-\begin{adjustbox}{\whichside, minipage=#1\linewidth}}
-{%
-\end{adjustbox}
-\end{figure}
+    \begin{figure}[#2]
+        \checkoddpage
+        \edef\whichside{\ifoddpage left\else right\fi}
+        \begin{adjustbox}{\whichside, minipage=#1\linewidth}}
+        {%
+        \end{adjustbox}
+    \end{figure}
 }
 
 % Gives a nice draft text.
@@ -292,18 +289,18 @@
 \newcommand{\creflastconjunction}{, and\nobreakspace}
 
 % Define the dummy sentence, an ancient palindrome.
-\def\sator{Sator Arepo tenet opera rotas.}
+\def\sator{Sator Arepo tenet opera rotas.\xspace}
 
 % A command to print the sentence repeatedly.
 % Argument #1 is the number of times to repeat it.
 \newcount\loopcounter
 \def\dummysentences#1{%
-\loopcounter = #1
-\loop
-\sator\ %
-\advance\loopcounter by -1
-\ifnum\loopcounter > 0
-\repeat%
+    \loopcounter = #1
+    \loop
+    \sator\ %
+    \advance\loopcounter by -1
+    \ifnum\loopcounter > 0
+    \repeat%
 }
 
 % Oxford blue
@@ -315,12 +312,12 @@
 
 % Temporary environment for the InFoMM side bubble. 
 \NewDocumentEnvironment{mysidenote}{}{% verticle offset
-\noindent
-\begin{minipage}[t]{\linewidth}		\begin{mdframed}[roundcorner=5pt, linecolor=oxfordblue, linewidth=2pt, backgroundcolor=yellow!30, shadow=true,shadowcolor=black,shadowsize=8pt]%
-}
-{%
-\end{mdframed}
-\end{minipage}
+    \noindent
+    \begin{minipage}[t]{\linewidth}		\begin{mdframed}[roundcorner=5pt, linecolor=oxfordblue, linewidth=2pt, backgroundcolor=yellow!60, shadow=true,shadowcolor=black,shadowsize=6pt]%
+        }
+        {%
+        \end{mdframed}
+    \end{minipage}
 }
 
 % The final command for an InFoMM margin bubble. 
@@ -334,24 +331,42 @@
 
 %InFoMM glossary
 \NewDocumentEnvironment{infommitemize}{}{% verticle offset
-	\noindent
-	\begin{itemize}[label={\color{cyan}{$\blacksquare$}}]
-		}
-		{%
-	\end{itemize}
+    \noindent
+    \begin{itemize}[label={\color{cyan}{$\blacksquare$}}]
+    }
+    {%
+    \end{itemize}
 }
 
 \newcommand{\coverimage}[1][cover_image]{
-	\newcommand{\thecoverimage}{#1}
+    \newcommand{\thecoverimage}{#1}
 }
 
 % Nice colouring of section titles
 \titleformat{\section}
-{\color{oxfordblue}\normalfont\Large\bfseries}
-{\color{oxfordblue}\thesection}{1em}{}
+{\color{oxfordblue}\normalfont\huge\bfseries}
+{\color{oxfordblue}\thesection}{1em}{\thesection.\hspace{1ex}}
 \titleformat{\subsection}
 {\color{cyan}\normalfont\Large\bfseries}
 {\color{cyan}\thesection}{1em}{}
 \titleformat{\subsubsection}
 {\color{cyan}\normalfont\Large\bfseries}
 {\color{cyan}\thesection}{1em}{}
+
+% Shorten the spacing after section headings
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+
+
+% Remove section numbers in TOC. 
+%\makeatletter
+%\let\latexl@section\l@section
+%\def\l@section#1#2{\begingroup\let\numberline\@gobble\latexl@section{#1}{#2}\endgroup}
+%\makeatother
+% Remove subsection numbers in TOC. 
+\makeatletter
+\let\latexl@subsection\l@subsection
+\def\l@subsection#1#2{\begingroup\let\numberline\@gobble\latexl@subsection{\quad#1}{#2}\endgroup}
+\makeatother
