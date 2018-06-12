@@ -347,8 +347,8 @@
 
 % Nice colouring of section titles
 \titleformat{\section}
-{\color{oxfordblue}\normalfont\Large\bfseries}
-{\color{oxfordblue}\thesection}{1em}{}
+{\color{oxfordblue}\normalfont\Huge\bfseries}
+{\color{oxfordblue}\thesection}{1em}{\thesection.\quad}
 \titleformat{\subsection}
 {\color{cyan}\normalfont\Large\bfseries}
 {\color{cyan}\thesection}{1em}{}
@@ -358,12 +358,12 @@
 
 
 % Remove section numbers in TOC. 
-\makeatletter
-\let\latexl@section\l@section
-\def\l@section#1#2{\begingroup\let\numberline\@gobble\latexl@section{#1}{#2}\endgroup}
-\makeatother
+%\makeatletter
+%\let\latexl@section\l@section
+%\def\l@section#1#2{\begingroup\let\numberline\@gobble\latexl@section{#1}{#2}\endgroup}
+%\makeatother
 % Remove subsection numbers in TOC. 
 \makeatletter
 \let\latexl@subsection\l@subsection
-\def\l@subsection#1#2{\begingroup\let\numberline\@gobble\latexl@subsection{#1}{#2}\endgroup}
+\def\l@subsection#1#2{\begingroup\let\numberline\@gobble\latexl@subsection{\quad#1}{#2}\endgroup}
 \makeatother
