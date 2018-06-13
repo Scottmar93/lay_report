@@ -27,6 +27,7 @@
 \usepackage{emptypage} % Empty pages have no headers and footers.
 \usepackage{enumitem} % Nice listing options in itemize and enumerate.
 \usepackage{esdiff} % Gives nice differential operators.
+\usepackage{etoolbox} % For defining conditionals. 
 \usepackage{fancyhdr} % Nice headers.
 \usepackage{float} % Nice figure placement.
 \usepackage[T1]{fontenc} % Nice range of text characters and accents.
@@ -79,6 +80,11 @@
 \usepackage[margin=10pt,font=small, textfont=bf,labelfont=bf,labelsep=endash]{caption} % Caption figures and tables nicely. %% After cleveref.
 \usepackage[left=60mm,right=26mm,top=30mm,bottom=29mm, heightrounded, marginparwidth=41mm, marginparsep=8mm, headsep=10mm]{geometry} % Use nice margins. Does give a small change in the default page margins. 
 
+\makeatletter
+\if@twoside % commands below work only for twoside option of \documentclass
+\newgeometry{left=26mm,right=60mm,top=30mm,bottom=29mm, heightrounded, marginparwidth=41mm, marginparsep=8mm, headsep=10mm}
+\fi
+\makeatother
 
 % Ensures subsubsections are numbered.
 \setcounter{secnumdepth}{3}
@@ -222,7 +228,7 @@
         \end{tikzpicture}\end{adjustbox}}
 \newcommand{\textoverline}[1]{$\overline{\mbox{#1}}$}
 % The footers are specified but are not the same margin widths as the headers. 
-\fancyfoot[LE]{\hspace*{-0.5\innermarginonesided}\begin{adjustbox}{left, minipage=0.9\paperwidth}
+\fancyfoot[LE]{\hspace*{-0.8\innermarginonesided}\begin{adjustbox}{left, minipage=0.9\paperwidth}
         \raggedright
         \color{cyan}\textoverline{\color{black}\underline{\hphantom{\ }\thepage
                 \begin{minipage}[c]{0\linewidth}
@@ -231,7 +237,7 @@
                 \rule{0.9\linewidth}{0pt}\rule{0pt}{2.0ex}}}
     \end{adjustbox}
 }
-\fancyfoot[RO]{\hspace*{0.5\innermarginonesided}\begin{adjustbox}{right, minipage=0.9\paperwidth}
+\fancyfoot[RO]{\hspace*{0.8\innermarginonesided}\begin{adjustbox}{right, minipage=0.9\paperwidth}
         \raggedleft
         \color{cyan}\textoverline{\color{black}\underline{
                 \begin{minipage}[c]{0\linewidth}
@@ -249,7 +255,7 @@
 
 % Make margin notes small
 \renewcommand*{\marginfont}{\noindent \small}
-\reversemarginpar % If I want a wider margin by the binding.
+\IfBooleanTF{@twoside}{\reversemarginpar}{}% If I want a wider margin by the binding.
 % Ensuring nice justification.
 \renewcommand\raggedrightmarginnote{\sloppy}
 \renewcommand\raggedleftmarginnote{\sloppy}
@@ -325,9 +331,9 @@
 % Temporary environment for the InFoMM side bubble. 
 \NewDocumentEnvironment{mysidenote}{}{% verticle offset
     \noindent
-    \begin{minipage}[t]{\linewidth}		\begin{mdframed}[roundcorner=5pt, linecolor=oxfordblue, linewidth=2pt, backgroundcolor=yellow!40, shadow=true,shadowcolor=black,shadowsize=6pt]%
+    \begin{minipage}[t]{\linewidth}		\begin{mdframed}[roundcorner=5pt, linecolor=oxfordblue, linewidth=2pt, backgroundcolor=yellow!40, shadow=true,shadowcolor=black,shadowsize=6pt]\raggedright
         }
-        {%
+        {
         \end{mdframed}
     \end{minipage}
 }
@@ -381,4 +387,13 @@
 \makeatletter
 \let\latexl@subsection\l@subsection
 \def\l@subsection#1#2{\begingroup\let\numberline\@gobble\latexl@subsection{\quad#1}{#2}\endgroup}
+\makeatother
+
+
+\newtoggle{TWOSIDED}
+\togglefalse{TWOSIDED}
+\makeatletter
+\if@twoside % commands below work only for twoside option of \documentclass
+\toggletrue{TWOSIDED}
+\fi
 \makeatother

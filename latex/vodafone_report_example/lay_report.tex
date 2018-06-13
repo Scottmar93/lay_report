@@ -1,4 +1,4 @@
-\documentclass[english,a4paper,oneside,9pt]{extarticle}
+\documentclass[english,a4paper,twoside,9pt]{extarticle}
 \input{preamble}
 
 \title{Herding top percentiles}
@@ -47,7 +47,7 @@ Our aim is to increase the classification accuracy in this top percentile, impro
 
 
 
-\infommmarginnote[0em]{For machine learning, data-set is split into a training, validation, and prediction set.}
+\infommmarginnote[-1em]{For machine learning, data-set is split into a training, validation, and prediction set.}
 Machine learning algorithms must be provided with data. The overall data-set is correspondingly split into three distinct and non-overlapping sets: \textit{training}, \textit{validation}, and \textit{prediction}. The training set is what we provide to the algorithm to learn from. After a learner is trained, we assess its performance on the validation set. Validation identifies learners which may have over-fit the training set, or generalise poorly to unseen data. Depending on the results from the validation stage, we may revisit the algorithm, and iterate several times between training and validation. After this, we should know how the algorithms expect to perform, their robustness, and how they compare. 
 
 The marker we use to identify whether a customer should be offered a promotion is if they churned within 3 months. Hence, to create a predictive model, a learner must be trained on data which are at least 3 months old. The temporal structure of the data is presented in \Cref{fig:temporal_distribution_of_samples}. Each customer is a sample in this data-set. The samples from March 2017 form the prediction set. To keep the validation set representative of the prediction set, 400,000 samples were taken from December 2016 for validation. The training set consisted of the 397,028 samples remaining from 2016.
@@ -76,7 +76,7 @@ There are many algorithms we could use to learn from the data, each giving its o
 \subsection{Adaptive boosting}
 
 
-\infommmarginnote[4em]{Adaptive boosting increases the weights for misclassified samples.}
+\infommmarginnote[3em]{Adaptive boosting increases the weights for misclassified samples.}
 A very data-centric boosting method is adaptive boosting. The premise is to assume that several base learners have been trained and currently form an ensemble, but we want to introduce another. Taking the most recently trained learner, we see which samples from the training set it misclassifies. We then train a new learner on the same training set, but we reweight the samples. We increase the sample weights by a constant factor for those which were misclassified, and decrease those which were correctly classified. This means the new learner will increase its focus on learning those which were misclassified, and less on those which were correct. When this new learner is trained, the overall error it incurs is evaluated, and its contribution to the ensemble is weighted accordingly. The better the learner does, the greater its contribution to the ensemble. 
 
 \subsection{Gradient boosting}
@@ -149,7 +149,7 @@ We inspected the data and demonstrated that higher accuracies could be achieved 
 
 Within the Vodafone customer base, there is an imbalance in the number of churners and non-churners. To address this imbalance, we considered ADASYN, SMOTE, and Tomek links, which were two oversampling methods and an undersampling method respectively. SMOTE showed small but appreciable performance gains, Tomek links gave no nett improvement, and ADASYN reduced performance. Consequently, we would recommend including SMOTE in subsequent algorithm validations. 
 
-\infommmarginnote{AdaBoost achieved an accuracy of 51.8\%.}
+\infommmarginnote[0.5em]{AdaBoost achieved an accuracy of 51.8\%.}
 From the experiments with cost-sensitive boosting methods, we found a myriad of different performance behaviours. Emerging from this we found that AdaBoost, using 1,500 imbalanced base learners, achieved the highest recorded accuracy of $ 51.8\pm 0.2 $\%. This was approximately 1.5\% better than the best single algorithm Vodafone had found.
 
 As a consequence of these findings, we would promote exploring SMOTE when developing and validating any new algorithms. Furthermore, its benefits could be realised across a wider range of algorithms. Additionally, although cost-sensitive boosting algorithms did not achieve the highest recorded accuracy, for a variety of different base learners they usually proved competitive, and would be suitable for further comparisons.
