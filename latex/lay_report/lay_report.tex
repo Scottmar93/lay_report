@@ -1,14 +1,23 @@
-\documentclass[english,twoside,10pt]{extarticle}
-\input{preamble}
+\documentclass{infommlay}
+%\input{preamble}
+%\usepackage{ragged2e} % For nice allignment.
+\usepackage{sansmath} % Gives a changing math font. %% Must be before newpxtext/newpxmath ! %%
+\usepackage{enumitem} % Nice listing options in itemize and enumerate.
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{mathtools} % Gives the colon equals symbol.
+\usepackage{bm} % Bold math symbols. %% Needs to be loaded after newpxtext/math. %%
+\usepackage{lipsum} % Useful for adding jargon.
+\usepackage{blindtext} % Generates dummy maths. cf. lipsum.
+\graphicspath{{../../figures/}{../../figures/logos/}}
 
 \title{Mini-project lay report}
 \author{Oliver Sheridan-Methven \and Attila Kovacs}
-\coverimage[cover_image] % Specify your own image using [].
+\coverimage{cover_image} % Specify your own image using {}.
+\companylogo{arm_logo_blue}
 
 \begin{document}
-
-\input{cover_page}
-\input{table_of_contents_page}
+\maketitle\restoregeometry\maketoc\restoregeometry% Title and TOC page
 
 % For proof reading
 %\doublespacing
@@ -16,18 +25,19 @@
 \section{Introduction}
 \subsection{Background information}
 
-\infommmarginnote{\dummysentences{5}}
+\infommmarginnote{\dummysentences{2}}
 \lipsum[2]
 
 We can reference loads of useful stuff like \Cref{fig:harris_cartoon,fig:side_cartoon}, and also \Cref{tab:some_useful_values}.
 
 \begin{table}[htb]
     \centering
-    \begin{tabular}{llll}
-    	Quantity        & Name      & Value                 & Units                                \\ \hline
+	\begin{tabular}{llll}
+		\toprule
+    	Quantity        & Name      & Value                 & Units                                \\ \midrule
     	Time            & Tenure    & 12                    & \si{\micro\second}                   \\
     	Length          & Height    & 1.82                  & \si{\centi\meter}                    \\
-    	Planks constant & $ \hbar $ & $ 6.62\cdot10^{-32} $ & \si{\meter^2.\kilogram.\second^{-1}}
+    	Planks constant & $ \hbar $ & $ 6.62\cdot10^{-32} $ & \si{\meter^2.\kilogram.\second^{-1}} \\\bottomrule
     \end{tabular}
     \caption{Some useful values.}
     \label{tab:some_useful_values}
@@ -52,12 +62,12 @@ We can reference loads of useful stuff like \Cref{fig:harris_cartoon,fig:side_ca
 \subsubsection*{Glossary of terms}
 \addcontentsline{toc}{section}{Glossary} % To add an un-numbered section to the contents. 
 
-\begin{infommitemize}
-	\litem{Cartoon} A brilliant sketch.
-	\litem{Lay report} A smaller version of the technical report without all the maths.
-	\litem{InFoMM} A great way to get a PhD and change the world. 
-	\litem{Something a bit odd} \dummysentences{5}
-\end{infommitemize}
+\begin{itemize}
+	\item{Cartoon} A brilliant sketch.
+	\item{Lay report} A smaller version of the technical report without all the maths.
+	\item{InFoMM} A great way to get a PhD and change the world. 
+	\item{Something a bit odd} \dummysentences{2}
+\end{itemize}
 
 
 \lipsum[1]
@@ -100,9 +110,9 @@ def prime_numbers():
 			is_prime = True  
 			for p in primes:
 				if x % p == 0:
-					is_prime = False  # The number is not prime.
+					is_prime = False
 					x += 1
-					break  # We do not need further checks.
+					break  
 			if is_prime:
 				primes.append(x)
 				yield x
@@ -110,11 +120,12 @@ def prime_numbers():
 
 \blindmathpaper
 
-\section*{Conclusions, Recommendations, and Further Work}
-\dummysentences{3}
-\begin{myquote}[Caesar, head of the Roman empire.]
+\section{Conclusions, Recommendations, \& Further Work}
+\lipsum[10]
+
+\begin{quote}{Caesar, head of the Roman empire.}
 \lipsum[66]
-\end{myquote}
+\end{quote}
 
 % Add the bibliography.
 \begin{small}
