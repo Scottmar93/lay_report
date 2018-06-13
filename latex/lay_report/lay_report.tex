@@ -2,7 +2,7 @@
 \input{preamble}
 
 \title{Mini-project lay report}
-\author{Oliver Sheridan-Methven \and Attila Kovacs}
+\author{Oliver Sheridan-Methven}
 \coverimage[cover_image] % Specify your own image using [].
 
 \begin{document}
@@ -16,7 +16,8 @@
 \section{Introduction}
 \subsection{Background information}
 
-\infommmarginnote{\dummysentences{5}}
+\infommmarginnote{\dummysentences{3}}
+\infommmarginnote[10em]{We can change the vertical spacing of these boxes using the optional command. (1em approximately corresponds to a line)}
 \lipsum[2]
 
 We can reference loads of useful stuff like \Cref{fig:harris_cartoon,fig:side_cartoon}, and also \Cref{tab:some_useful_values}.
@@ -133,10 +134,10 @@ While for the final company quote use:
 [Insert name], [Job title + company] said: ``\emph{\dummysentences{5}}''
 
 % Add the bibliography.
-\begin{small}
-	\nocite{*} % Publishes any unused references.
-	\bibliography{references}
-\end{small}
+%\begin{small}
+%	\nocite{*} % Publishes any unused references.
+{\small\bibliography{references}}
+%\end{small}
 
 \section{COMMENTS ON THE REPORT}
 For the \textbf{final} editing:
