@@ -58,7 +58,7 @@
 \usepackage{parskip} % Gives nicer indenting.
 \usepackage{physics} % Nice partial derivatives and BRAKET notation.
 \usepackage{ragged2e} % For nice allignment.
-%\usepackage[norefs]{refcheck} % Can show any unused references.
+\usepackage[norefs]{refcheck} % Can show any unused references.
 \usepackage{romannum} % Nice typing for roman numerals.
 \usepackage{setspace} % Ideal for increasing line spacing. E.g.  \doublespacing
 \usepackage{siunitx} % Nice formating of units.
@@ -361,15 +361,16 @@
 }
 
 % Nice colouring of section titles
-\titleformat{\section}
-{\color{oxfordblue}\normalfont\fontsize{16}{20}\selectfont\bfseries}
-{\color{oxfordblue}\thesection}{1em}{\thesection.\hspace{1ex}}
+\titleformat{\section}[block]
+{\color{blue}\normalfont\fontsize{16}{20}\selectfont\bfseries}
+{\thesection.}{1em}{}
+%{\color{blue}\thesection}{1em}{\thesection.\hspace{1ex}}
 \titleformat{\subsection}
 {\color{cyan}\normalfont\Large\bfseries}
-{\color{cyan}\thesection}{1em}{}
+{\thesection.}{1em}{}
 \titleformat{\subsubsection}
 {\color{cyan}\normalfont\Large\bfseries}
-{\color{cyan}\thesection}{1em}{}
+{\thesection.}{1em}{}
 
 % Shorten the spacing after section headings
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
