@@ -5,12 +5,12 @@
 \title{Mini-project lay report}
 \author{Oliver Sheridan-Methven}
 \coverimage[cover_image] % Specify your own image using [].
-
+\companylogo[vodafone_logo_long]
 
 \begin{document}
 
-\input{cover_page}
-\input{table_of_contents_page}
+\input{cover_page}  % The widths and heights here might need a bit of fine tuning. 
+\input{table_of_contents_page} % Don't touch. 
 
 % For proof reading
 %\doublespacing
@@ -41,7 +41,6 @@ We can reference loads of useful stuff like \Cref{fig:harris_cartoon,fig:side_ca
 \todo{In the margin I can mention something I need to do.}
 \lipsum[75]
 \todo[inline=true]{Incase I need to highlight something I need to do.}
-
 
 It's all  about \marginnote{
 	\begin{center}
@@ -145,6 +144,8 @@ For the \textbf{final} editing:
 \begin{itemize}
     \item Ensure the side bubbles are correctly centred and don't spill over any pages. 
     \item Ensure there are no dangling headers (This might require inserting a \verb|\clearpage| command.)
+    \item Use the \verb|siunitx| package and associated \verb|\SI| and \verb|\si| commands where needed. 
 \end{itemize}
+
 \clearpage
 \end{document}

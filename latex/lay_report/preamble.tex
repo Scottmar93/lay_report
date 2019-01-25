@@ -380,6 +380,9 @@
 \newcommand{\coverimage}[1][cover_image]{
     \newcommand{\thecoverimage}{#1}
 }
+\newcommand{\companylogo}[1][cover_image]{
+    \newcommand{\thecompanylogo}{#1}
+}
 
 % Nice colouring of section titles
 \titleformat{\section}
@@ -410,5 +413,5 @@
 \def\l@subsection#1#2{\begingroup\let\numberline\@gobble\latexl@subsection{\quad#1}{#2}\endgroup}
 \makeatother
 
-
-
+% Ensures the SI command detects the local environment (e.g. in captions).
+\sisetup{detect-weight=true, detect-family=true}
