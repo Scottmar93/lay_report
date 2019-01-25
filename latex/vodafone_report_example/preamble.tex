@@ -22,6 +22,8 @@
 \usepackage{bbm} % Gives Blackboard fonts.
 \usepackage{blindtext} % Generates dummy maths. cf. lipsum.
 \usepackage{calc} % Calculates widths of words. 
+\let\counterwithout\relax
+\let\counterwithin\relax
 \usepackage{chngcntr} % Changing counters, e.g. with footnotes.
 \usepackage[nostamp]{draftwatermark} % Gives a draft overlay. Use options [nostamp] or [final].
 \usepackage{emptypage} % Empty pages have no headers and footers.
@@ -58,6 +60,7 @@
 \usepackage{parskip} % Gives nicer indenting.
 \usepackage{physics} % Nice partial derivatives and BRAKET notation.
 \usepackage{ragged2e} % For nice allignment.
+%\usepackage[norefs]{refcheck} % Can show any unused references.
 \usepackage{romannum} % Nice typing for roman numerals.
 \usepackage{setspace} % Ideal for increasing line spacing. E.g.  \doublespacing
 \usepackage{siunitx} % Nice formating of units.
@@ -197,7 +200,21 @@
 \newlength{\oneinch}
 \setlength\oneinch{1in}
 \newlength{\innermarginonesided}
-\setlength\innermarginonesided{\IfBooleanTF{@twoside}{\evensidemargin+1in}{\paperwidth-\textwidth-\oddsidemargin-1in}}
+
+\newtoggle{TWOSIDED}
+\togglefalse{TWOSIDED}
+\makeatletter
+\if@twoside % commands below work only for twoside option of \documentclass
+\toggletrue{TWOSIDED}
+\fi
+\makeatother
+
+\setlength\innermarginonesided{\paperwidth-\textwidth-\oddsidemargin-1in}
+\makeatletter
+\if@twoside
+\setlength\innermarginonesided{\evensidemargin+1in}
+\fi
+\makeatother
 
 
 \definecolor{header1}{RGB}{253,252,204}
@@ -208,13 +225,15 @@
 \fancyhead[RE]{%
     \begin{adjustbox}{left, minipage=0.9\paperwidth}
         \hspace*{-0.8\innermarginonesided}
-        \begin{tikzpicture}
+        \begin{tikzpicture}[overlay]
         \fill[fill=header5, draw=header5, minimum height=8mm, minimum width=16.4cm,anchor=west] (0,-1.4em) rectangle (1.0\linewidth,1.5em);
         \fill[fill=header4, draw=header4, minimum height=8mm, minimum width=16.4cm,anchor=west] (0.7\linewidth,-1.4em) rectangle (\linewidth,1.5em);
         \fill[fill=header3, draw=header3, minimum height=8mm, minimum width=16.4cm,anchor=west] (0.8\linewidth,-1.4em) rectangle (\linewidth,1.5em);
         \fill[fill=header2, draw=header2, minimum height=8mm, minimum width=16.4cm,anchor=west] (0.85\linewidth,-1.4em) rectangle (\linewidth,1.5em);        
         \fill[fill=header1, draw=header1, minimum height=8mm, minimum width=16.4cm,anchor=east] (0.9\linewidth,-1.4em) rectangle (\linewidth,1.5em);
-        \end{tikzpicture}\end{adjustbox}}
+        \end{tikzpicture}%
+\end{adjustbox}%
+    }
 \fancyhead[LO]{%
     \begin{adjustbox}{right, minipage=0.9\paperwidth}
         \hspace*{0.8\innermarginonesided}
@@ -224,7 +243,10 @@
         \fill[fill=header3, draw=header3, minimum height=8mm, minimum width=16.4cm,anchor=east] (0,-1.4em) rectangle (0.2\linewidth,1.5em);
         \fill[fill=header2, draw=header2, minimum height=8mm, minimum width=16.4cm,anchor=east] (0,-1.4em) rectangle (0.15\linewidth,1.5em);        
         \fill[fill=header1, draw=header1, minimum height=8mm, minimum width=16.4cm,anchor=east] (0,-1.4em) rectangle (0.1\linewidth,1.5em);
-        \end{tikzpicture}\end{adjustbox}}
+        \end{tikzpicture}%
+\end{adjustbox}%
+    }
+
 \newcommand{\textoverline}[1]{$\overline{\mbox{#1}}$}
 % The footers are specified but are not the same margin widths as the headers. 
 \fancyfoot[LE]{\hspace*{-0.8\innermarginonesided}\begin{adjustbox}{left, minipage=0.9\paperwidth}
@@ -254,7 +276,7 @@
 
 % Make margin notes small
 \renewcommand*{\marginfont}{\noindent \small}
-\IfBooleanTF{@twoside}{\reversemarginpar}{}% If I want a wider margin by the binding.
+%\IfBooleanTF{@twoside}{\reversemarginpar}{}% If I want a wider margin by the binding.
 % Ensuring nice justification.
 \renewcommand\raggedrightmarginnote{\sloppy}
 \renewcommand\raggedleftmarginnote{\sloppy}
@@ -360,16 +382,15 @@
 }
 
 % Nice colouring of section titles
-\titleformat{\section}[block]
+\titleformat{\section}
 {\color{oxfordblue}\normalfont\fontsize{16}{20}\selectfont\bfseries}
-{\thesection.}{1em}{}
-%{\color{blue}\thesection}{1em}{\thesection.\hspace{1ex}}
+{\color{oxfordblue}\thesection}{1em}{\thesection.\hspace{1ex}}
 \titleformat{\subsection}
 {\color{cyan}\normalfont\Large\bfseries}
-{\thesection.}{1em}{}
+{\color{cyan}\thesection}{1em}{}
 \titleformat{\subsubsection}
 {\color{cyan}\normalfont\Large\bfseries}
-{\thesection.}{1em}{}
+{\color{cyan}\thesection}{1em}{}
 
 % Shorten the spacing after section headings
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
@@ -390,10 +411,4 @@
 \makeatother
 
 
-\newtoggle{TWOSIDED}
-\togglefalse{TWOSIDED}
-\makeatletter
-\if@twoside % commands below work only for twoside option of \documentclass
-\toggletrue{TWOSIDED}
-\fi
-\makeatother
+

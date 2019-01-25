@@ -1,11 +1,9 @@
 % Table of contents page.
-\afterpage{
-	\titleformat{\section}
-	{\color{oxfordblue}\normalfont\fontsize{16}{20}\selectfont\bfseries}
-	{\color{black}\thesection}{1em}{}
-\pagestyle{empty}
-%\newgeometry{left=110mm,right=20mm,top=30mm,bottom=29mm, heightrounded, marginparwidth=100mm, marginparsep=5mm}
-\IfBooleanTF{@twoside}{\reversemarginpar}{}
+
+\titleformat{\section}
+{\color{oxfordblue}\normalfont\fontsize{16}{20}\selectfont\bfseries}
+{\color{black}\thesection}{1em}{}
+\thispagestyle{empty}
 \iftoggle{TWOSIDED}{
 \newgeometry{right=110mm,left=20mm,top=30mm,bottom=29mm, heightrounded, marginparwidth=100mm, marginparsep=5mm}
 }{
@@ -19,8 +17,15 @@
 \end{minipage} \\
 \marginpar{\includegraphics[width=\linewidth]{andrew_wiles_building}}
 \clearpage
+\singlespacing
+\iftoggle{TWOSIDED}{
+\newgeometry{left=26mm,right=60mm,top=30mm,bottom=29mm, heightrounded, marginparwidth=41mm, marginparsep=8mm, headsep=10mm}
+}{
+\newgeometry{right=26mm,left=60mm,top=30mm,bottom=29mm, heightrounded, marginparwidth=41mm, marginparsep=8mm, headsep=10mm}
+\reversemarginpar
 }
+\restoregeometry
 \iftoggle{TWOSIDED}{}{\reversemarginpar}
-\cleardoublepage % Double page as page numbering starts at 1.
 \setcounter{section}{0}
 \pagenumbering{arabic}
+
