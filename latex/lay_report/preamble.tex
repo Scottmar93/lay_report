@@ -360,7 +360,7 @@
 }
 
 % The final command for an InFoMM margin bubble. 
-\newcommand{\infommmarginnote}[2][0mm]{\marginnote{\large\sffamily{}\sansmath\begin{mysidenote}{#2}\end{mysidenote}}[{#1}]}
+\newcommand{\infommmarginnote}[2][0mm]{\leavevmode\marginnote{\large\sffamily{}\sansmath\begin{mysidenote}{#2}\end{mysidenote}}[{#1}]\ignorespaces}
 
 % Useful for drawing a page border. 
 \usetikzlibrary{calc}
