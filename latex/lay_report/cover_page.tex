@@ -1,6 +1,6 @@
 % The cover page is a designed to look best on A4 and is designed to be a
 % "What you see is what you get".
-\thispagestyle{empty} % 'gobble' pagestyle throws issues with nomencl package. 
+\thispagestyle{empty} % 'gobble' pagestyle throws issues with nomencl package.
 \afterpage{
 %\pagestyle{empty}
 \newgeometry{left = 20mm, right = 20mm, top = 15mm, bottom = 10mm}
@@ -15,7 +15,7 @@ rectangle
 \node[anchor=north west, xshift=10mm, yshift=-10mm] at (current page.north west) {\includegraphics[width=0.35\linewidth]{epsrc_logo_new}};
 \node[anchor=north east, xshift=-10mm, yshift=-10mm] at (current page.north east) {\includegraphics[width=0.3\linewidth]{infomm_logo_blue}};
 \node[anchor=south west, xshift=10mm, yshift=10mm] at (current page.south west) {\includegraphics[width=0.3\linewidth]{oxford_logo_blue_long}};
-\node[anchor=south east, xshift=-10mm, yshift=10mm] at (current page.south east) {\includegraphics[width=0.4\linewidth]{\thecompanylogo}};
+\node[anchor=south east, xshift=-11mm, yshift=11mm] at (current page.south east) {\includegraphics[width=0.4\linewidth]{\thecompanylogo}};
 \end{tikzpicture}
 
 \begin{center}
@@ -24,7 +24,7 @@ rectangle
 \vfill
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{\thecoverimage}
+\includegraphics[width=0.9\linewidth]{\thecoverimage}
 \end{figure}
 \vfill
 {\fontsize{25}{28}\selectfont\color{oxfordblue}\textbf{\thetitle}}\\
@@ -35,4 +35,3 @@ rectangle
 \restoregeometry
 }
 \clearpage
-	
