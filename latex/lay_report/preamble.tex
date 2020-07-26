@@ -1,13 +1,13 @@
-% Author: 
+% Author:
 %
 %	Oliver Sheridan-Methven, November 2017.
-%	
+%
 % Description:
 %
-%	A collection of extremely useful packages 
+%	A collection of extremely useful packages
 %	which have been accumulated over a long time,
 %	all of which combine to make very nice LaTeX
-%	documents. 
+%	documents.
 
 
 
@@ -21,7 +21,7 @@
 \usepackage{arydshln} % Dashed lines using \hdashline \cdashline
 \usepackage{bbm} % Gives Blackboard fonts.
 \usepackage{blindtext} % Generates dummy maths. cf. lipsum.
-\usepackage{calc} % Calculates widths of words. 
+\usepackage{calc} % Calculates widths of words.
 \let\counterwithout\relax
 \let\counterwithin\relax
 \usepackage{chngcntr} % Changing counters, e.g. with footnotes.
@@ -29,7 +29,7 @@
 \usepackage{emptypage} % Empty pages have no headers and footers.
 \usepackage{enumitem} % Nice listing options in itemize and enumerate.
 \usepackage{esdiff} % Gives nice differential operators.
-\usepackage{etoolbox} % For defining conditionals. 
+\usepackage{etoolbox} % For defining conditionals.
 \usepackage{fancyhdr} % Nice headers.
 \usepackage{float} % Nice figure placement.
 \usepackage[T1]{fontenc} % Nice range of text characters and accents.
@@ -52,10 +52,10 @@
 \usepackage[numbers, sort&compress]{natbib} % Nice references.
 \usepackage{sansmath} % Gives a changing math font. %% Must be before newpxtext/newpxmath ! %%
 \usepackage{newpxtext} % Gives Palatino and Helvetica fonts.
-\usepackage{newpxmath} % Gives Palatino and Helvetica fonts in maths. 
+\usepackage{newpxmath} % Gives Palatino and Helvetica fonts in maths.
 \usepackage{bm} % Bold math symbols. %% Needs to be loaded after newpxtext/math. %%
 \usepackage{nicefrac} % Gives nice fractions for superscripts.
-\usepackage{nomencl} % Gives a symbol nomenclature. 
+\usepackage{nomencl} % Gives a symbol nomenclature.
 \usepackage[super]{nth} % Gives nice ordinal superscripts, eg 1st, 2nd, etc.
 \usepackage{parskip} % Gives nicer indenting.
 \usepackage{physics} % Nice partial derivatives and BRAKET notation.
@@ -64,11 +64,11 @@
 \usepackage{romannum} % Nice typing for roman numerals.
 \usepackage{setspace} % Ideal for increasing line spacing. E.g.  \doublespacing
 \usepackage{siunitx} % Nice formating of units.
-\usepackage{sidenotes} % Nice margin figures and margin tables. 
+\usepackage{sidenotes} % Nice margin figures and margin tables.
 \usepackage{subcaption} % Side by side figures.
 \usepackage[textsize=small]{todonotes} % A nice TODO list. [disable] to supress.
 \usepackage{tikz} % Nice diagrams.
-\usepackage{titling} % Access title variables. 
+\usepackage{titling} % Access title variables.
 \usepackage{titlesec} % Nice section title colouring options.
 \usepackage[nottoc]{tocbibind} % Gives nices Table of Contents
 \usepackage{xcolor} % This is useful for making greyed table cells, nice for headers. Known preamble placement issues.
@@ -80,7 +80,7 @@
 %%%% Should be loaded after hyperref. %%%%
 \usepackage{cleveref} % Gives smart referencing. %% After Hyperref
 \usepackage[margin=10pt,font=small, textfont=bf,labelfont=bf,labelsep=endash]{caption} % Caption figures and tables nicely. %% After cleveref.
-\usepackage[left=60mm,right=26mm,top=30mm,bottom=29mm, heightrounded, marginparwidth=41mm, marginparsep=8mm, headsep=10mm]{geometry} % Use nice margins. Does give a small change in the default page margins. 
+\usepackage[left=60mm,right=26mm,top=30mm,bottom=29mm, heightrounded, marginparwidth=41mm, marginparsep=8mm, headsep=10mm]{geometry} % Use nice margins. Does give a small change in the default page margins.
 
 \makeatletter
 \if@twoside % commands below work only for twoside option of \documentclass
@@ -91,26 +91,26 @@
 % Ensures subsubsections are numbered.
 \setcounter{secnumdepth}{1}
 
-% Making an index. 
+% Making an index.
 \makeindex
 
-% Making a nomenclature. 
+% Making a nomenclature.
 \makenomenclature
-% The column width for any nomenclature. 
+% The column width for any nomenclature.
 \setlength\nomlabelwidth{0.2\linewidth}
 
-% Set the table of content depth to only subsections. 
+% Set the table of content depth to only subsections.
 \setcounter{tocdepth}{2}
 
 % Supressing bad box warnings
-%\hbadness=10000 
+%\hbadness=10000
 
-% Where to search for figures. 
+% Where to search for figures.
 \graphicspath{{../../figures/}{../../figures/logos/}}
 
 % Present the references in the order they are used.
 \bibliographystyle{unsrtnat}
-% Reduce spacing between references. 
+% Reduce spacing between references.
 \setlength{\bibsep}{0pt plus 0.3ex}
 
 % Listing -> Code in environment labels.
@@ -118,14 +118,14 @@
 \crefname{listing}{code}{codes}
 \Crefname{listing}{Code}{Codes}
 \lstset{
-    numbers=left, 
+    numbers=left,
     basicstyle=\ttfamily\footnotesize,
     frame=single, % adds a frame around the code
     xleftmargin=20.4pt,
     xrightmargin=3.4pt,
     %	numbersep=3mm,
 }
-\newfloat{lstfloat}{htbp}{lop} % environment for placing lisings in to make them float. 
+\newfloat{lstfloat}{htbp}{lop} % environment for placing lisings in to make them float.
 
 % Nice paragraph indents.
 \setlength{\parindent}{0mm}
@@ -187,7 +187,7 @@
 % Nice spacing in the first row of a table
 \newcommand{\firstrowspacing}{\rule{0pt}{2.6ex}}
 % For a more open look in tables.
-\setlength\extrarowheight{3pt} 
+\setlength\extrarowheight{3pt}
 
 % Some useful text commands.
 \newcommand{\nag}{NAG\textsuperscript{\textregistered}\xspace}
@@ -229,7 +229,7 @@
         \fill[fill=header5, draw=header5, minimum height=8mm, minimum width=16.4cm,anchor=west] (0,-1.4em) rectangle (1.0\linewidth,1.5em);
         \fill[fill=header4, draw=header4, minimum height=8mm, minimum width=16.4cm,anchor=west] (0.7\linewidth,-1.4em) rectangle (\linewidth,1.5em);
         \fill[fill=header3, draw=header3, minimum height=8mm, minimum width=16.4cm,anchor=west] (0.8\linewidth,-1.4em) rectangle (\linewidth,1.5em);
-        \fill[fill=header2, draw=header2, minimum height=8mm, minimum width=16.4cm,anchor=west] (0.85\linewidth,-1.4em) rectangle (\linewidth,1.5em);        
+        \fill[fill=header2, draw=header2, minimum height=8mm, minimum width=16.4cm,anchor=west] (0.85\linewidth,-1.4em) rectangle (\linewidth,1.5em);
         \fill[fill=header1, draw=header1, minimum height=8mm, minimum width=16.4cm,anchor=east] (0.9\linewidth,-1.4em) rectangle (\linewidth,1.5em);
         \end{tikzpicture}%
 \end{adjustbox}%
@@ -241,14 +241,14 @@
         \fill[fill=header5, draw=header5, minimum height=8mm, minimum width=16.4cm,anchor=east] (0,-1.4em) rectangle (1.0\linewidth,1.5em);
         \fill[fill=header4, draw=header4, minimum height=8mm, minimum width=16.4cm,anchor=east] (0,-1.4em) rectangle (0.3\linewidth,1.5em);
         \fill[fill=header3, draw=header3, minimum height=8mm, minimum width=16.4cm,anchor=east] (0,-1.4em) rectangle (0.2\linewidth,1.5em);
-        \fill[fill=header2, draw=header2, minimum height=8mm, minimum width=16.4cm,anchor=east] (0,-1.4em) rectangle (0.15\linewidth,1.5em);        
+        \fill[fill=header2, draw=header2, minimum height=8mm, minimum width=16.4cm,anchor=east] (0,-1.4em) rectangle (0.15\linewidth,1.5em);
         \fill[fill=header1, draw=header1, minimum height=8mm, minimum width=16.4cm,anchor=east] (0,-1.4em) rectangle (0.1\linewidth,1.5em);
         \end{tikzpicture}%
 \end{adjustbox}%
     }
 
 \newcommand{\textoverline}[1]{$\overline{\mbox{#1}}$}
-% The footers are specified but are not the same margin widths as the headers. 
+% The footers are specified but are not the same margin widths as the headers.
 \fancyfoot[LE]{\hspace*{-0.8\innermarginonesided}\begin{adjustbox}{left, minipage=0.9\paperwidth}
         \raggedright
         \color{cyan}\textoverline{\color{black}\underline{\hphantom{\ }\thepage
@@ -300,16 +300,16 @@
 % Gives a nice siderule environment. e.g. \begin{siderules}
 \newmdenv[topline=false,bottomline=false,rightline=false,skipabove=\topsep,skipbelow=\topsep]{siderules}
 
-% For a numbered description. Use inside enumerate, \litem{Something} etc. 
+% For a numbered description. Use inside enumerate, \litem{Something} etc.
 \newcommand\litem[1]{\item{\textbf{\underline{\smash{{#1}}:}}}}
 
 % Nice spacing in lists
-%\setlist{listparindent=\parindent,parsep=1ex} 
+%\setlist{listparindent=\parindent,parsep=1ex}
 
 % This aligns figures in the adjust box environment to the inner margin. For use with "myalignedfigure" (below).
 \newcommand{\aligninner}{\ifoddpage \raggedright \else \raggedleft \fi}%
 
-% Gives a nice aligned figure environment, where figures are flush to the inner margin overflowing off the outer margin first. Useful for very wide figures, or set of lots of sub figures. 
+% Gives a nice aligned figure environment, where figures are flush to the inner margin overflowing off the outer margin first. Useful for very wide figures, or set of lots of sub figures.
 \NewDocumentEnvironment{myalignedfigure}{O{1.3} O{htb}}{% fractional_linewidth,  position
     \begin{figure}[#2]
         \checkoddpage
@@ -324,7 +324,7 @@
 \SetWatermarkScale{1}
 \SetWatermarkLightness{0.9}
 
-% The oxford comma from cref for multiple citations. 
+% The oxford comma from cref for multiple citations.
 \newcommand{\creflastconjunction}{, and\nobreakspace}
 
 % Define the dummy sentence, an ancient palindrome.
@@ -345,11 +345,11 @@
 % Oxford blue
 \definecolor{oxfordblue}{RGB}{0, 33, 71}
 
-% Ensuring side boxes have shadows. 
+% Ensuring side boxes have shadows.
 \usetikzlibrary{shadows} % For shadowed boxes.
-\tikzset{every shadow/.style={opacity=1}} % Shadows given full opacity. 
+\tikzset{every shadow/.style={opacity=1}} % Shadows given full opacity.
 
-% Temporary environment for the InFoMM side bubble. 
+% Temporary environment for the InFoMM side bubble.
 \NewDocumentEnvironment{mysidenote}{}{% verticle offset
     \noindent
     \begin{minipage}[t]{\linewidth}		\begin{mdframed}[roundcorner=5pt, linecolor=oxfordblue, linewidth=2pt, backgroundcolor=yellow!40, shadow=true,shadowcolor=black,shadowsize=6pt]\raggedright
@@ -359,19 +359,19 @@
     \end{minipage}
 }
 
-% The final command for an InFoMM margin bubble. 
+% The final command for an InFoMM margin bubble.
 \newcommand{\infommmarginnote}[2][0mm]{\leavevmode\marginnote{\large\sffamily{}\sansmath\begin{mysidenote}{#2}\end{mysidenote}}[{#1}]\ignorespaces}
 
-% Useful for drawing a page border. 
+% Useful for drawing a page border.
 \usetikzlibrary{calc}
 
-% Enable blind maths. 
+% Enable blind maths.
 \blindmathtrue
 
 %InFoMM glossary
 \NewDocumentEnvironment{infommitemize}{}{% verticle offset
     \noindent
-    \begin{itemize}[label={\color{cyan}{$\blacksquare$}}]
+    \begin{itemize}[label={\color{oxfordblue}{$\blacksquare$}}]
     }
     {%
     \end{itemize}
@@ -389,11 +389,11 @@
 {\color{oxfordblue}\normalfont\fontsize{16}{20}\selectfont\bfseries}
 {\color{oxfordblue}\thesection}{1em}{\thesection.\hspace{1ex}}
 \titleformat{\subsection}
-{\color{cyan}\normalfont\Large\bfseries}
-{\color{cyan}\thesection}{1em}{}
+{\color{oxfordblue}\normalfont\Large\bfseries}
+{\color{oxfordblue}\thesection}{1em}{}
 \titleformat{\subsubsection}
-{\color{cyan}\normalfont\Large\bfseries}
-{\color{cyan}\thesection}{1em}{}
+{\color{oxfordblue}\normalfont\Large\bfseries}
+{\color{oxfordblue}\thesection}{1em}{}
 
 % Shorten the spacing after section headings
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
@@ -402,12 +402,12 @@
 
 
 
-% Remove section numbers in TOC. 
+% Remove section numbers in TOC.
 %\makeatletter
 %\let\latexl@section\l@section
 %\def\l@section#1#2{\begingroup\let\numberline\@gobble\latexl@section{#1}{#2}\endgroup}
 %\makeatother
-% Remove subsection numbers in TOC. 
+% Remove subsection numbers in TOC.
 \makeatletter
 \let\latexl@subsection\l@subsection
 \def\l@subsection#1#2{\begingroup\let\numberline\@gobble\latexl@subsection{\quad#1}{#2}\endgroup}

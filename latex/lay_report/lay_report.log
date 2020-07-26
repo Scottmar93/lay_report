@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.8.29)  26 JUL 2020 13:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.8.29)  26 JUL 2020 21:54
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2644,68 +2644,114 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
 . 
 . Defining environment 'infommitemize' with sig. '' on line 378.
 .................................................
+) (/usr/share/texlive/texmf-dist/tex/latex/overpic/overpic.sty
+Package: overpic 2017/10/06 1.0 picture overlays
+ (/usr/share/texlive/texmf-dist/tex/latex/eepic/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count389
+\d@lta=\count390
+\@delta=\dimen337
+\@@delta=\dimen338
+\@gridcnt=\count391
+\@joinkind=\count392
+\@dotgap=\dimen339
+\@ddotgap=\dimen340
+\@x@diff=\count393
+\@y@diff=\count394
+\x@diff=\dimen341
+\y@diff=\dimen342
+\@dotbox=\box111
+\num@segments=\count395
+\num@segmentsi=\count396
+\@datafile=\read3
+)) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen343
+\lightrulewidth=\dimen344
+\cmidrulewidth=\dimen345
+\belowrulesep=\dimen346
+\belowbottomsep=\dimen347
+\aboverulesep=\dimen348
+\abovetopsep=\dimen349
+\cmidrulesep=\dimen350
+\cmidrulekern=\dimen351
+\defaultaddspace=\dimen352
+\@cmidla=\count397
+\@cmidlb=\count398
+\@aboverulesep=\dimen353
+\@belowrulesep=\dimen354
+\@thisruleclass=\count399
+\@lastruleclass=\count400
+\@thisrulewidth=\dimen355
 )
-LaTeX Font Info:    Try loading font information for T1+zpltlf on input line 10.
+LaTeX Font Info:    Try loading font information for T1+zpltlf on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/newpx/t1zpltlf.fd
 File: t1zpltlf.fd 2015/01/17 v1.0 font definition file for T1/zpl/tlf
 )
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 10.
- (./lay_report.aux)
+(Font)              scaled to size 9.0pt on input line 28.
+ (./lay_report.aux
+
+LaTeX Warning: Label `fig:sei' multiply defined.
+
+
+LaTeX Warning: Label `fig:sei@cref' multiply defined.
+
+)
 \openout1 = `lay_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 10.
-LaTeX Font Info:    Try loading font information for OML+npxmi on input line 10.
+LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 28.
+LaTeX Font Info:    Try loading font information for OML+npxmi on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
 )
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 10.
-LaTeX Font Info:    Try loading font information for U+npxexa on input line 10.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for U+npxexa on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/newpx/unpxexa.fd
 File: unpxexa.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxexa.
 )
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 10.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 10.
-LaTeX Font Info:    Try loading font information for LMS+npxsy on input line 10.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for LMS+npxsy on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/newpx/lmsnpxsy.fd
 File: lmsnpxsy.fd 2016/08/13 Fontinst v1.933 font definitions for LMS/npxsy.
 )
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 10.
-LaTeX Font Info:    Try loading font information for LMX+npxexx on input line 10.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for LMX+npxexx on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/newpx/lmxnpxexx.fd
 File: lmxnpxexx.fd 2016/08/13 Fontinst v1.933 font definitions for LMX/npxexx.
 )
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count389
-\scratchdimen=\dimen337
-\scratchbox=\box111
-\nofMPsegments=\count390
-\nofMParguments=\count391
+\scratchcounter=\count401
+\scratchdimen=\dimen356
+\scratchbox=\box112
+\nofMPsegments=\count402
+\nofMParguments=\count403
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count392
-\MPscratchDim=\dimen338
-\MPnumerator=\count393
-\makeMPintoPDFobject=\count394
+\MPscratchCnt=\count404
+\MPscratchDim=\dimen357
+\MPnumerator=\count405
+\makeMPintoPDFobject=\count406
 \everyMPtoPDFconversion=\toks48
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -2719,16 +2765,16 @@ Package grfext Info: Graphics extension search list:
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count395
+\c@lstlisting=\count407
 Package marginnote Info: \pdfoutput not 0 or unimportant and
 (marginnote)             \pdflastxpos or \lastxpos available.
 (marginnote)             Extended position detection mode activated.
-\AtBeginShipoutBox=\box112
+\AtBeginShipoutBox=\box113
  ABD: EveryShipout initializing macros
-\c@mv@tabular=\count396
-\c@mv@boldtabular=\count397
+\c@mv@tabular=\count408
+\c@mv@boldtabular=\count409
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 10.
+LaTeX Info: Redefining \selectfont on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
@@ -2738,17 +2784,17 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \@sidenotes@extrawidth=\skip186
-Package hyperref Info: Link coloring ON on input line 10.
+Package hyperref Info: Link coloring ON on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count398
+\c@section@level=\count410
 )
-LaTeX Info: Redefining \ref on input line 10.
-LaTeX Info: Redefining \pageref on input line 10.
-LaTeX Info: Redefining \nameref on input line 10.
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
  (./lay_report.out) (./lay_report.out)
 \@outlinefile=\write6
 \openout6 = `lay_report.out'.
@@ -2788,64 +2834,64 @@ LaTeX Info: Redefining \nameref on input line 10.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c__siunitx_mathsf_int=\count399
-LaTeX Font Info:    Try loading font information for OT1+zpltlf on input line 10.
+\c__siunitx_mathsf_int=\count411
+LaTeX Font Info:    Try loading font information for OT1+zpltlf on input line 28.
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/ot1zpltlf.fd
 File: ot1zpltlf.fd 2015/01/17 v1.0 font definition file for OT1/zpl/tlf
 )
 LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 10.
+(Font)              scaled to size 9.0pt on input line 28.
 LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 10.
+(Font)              scaled to size 7.3pt on input line 28.
 LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 10.
-LaTeX Font Info:    Try loading font information for U+msa on input line 10.
+(Font)              scaled to size 5.5pt on input line 28.
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 10.
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+npxmia on input line 10.
+LaTeX Font Info:    Try loading font information for U+npxmia on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/newpx/unpxmia.fd
 File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
 )
-LaTeX Font Info:    Try loading font information for U+npxsym on input line 10.
+LaTeX Font Info:    Try loading font information for U+npxsym on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/newpx/unpxsym.fd
 File: unpxsym.fd 2015/03/21 Fontinst v1.933 font definitions for U/npxsym.
 )
-LaTeX Font Info:    Try loading font information for U+npxsyc on input line 10.
+LaTeX Font Info:    Try loading font information for U+npxsyc on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/newpx/unpxsyc.fd
 File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
 )
 LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
-(Font)              scaled to size 9.0pt on input line 10.
+(Font)              scaled to size 9.0pt on input line 28.
 LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
-(Font)              scaled to size 7.3pt on input line 10.
+(Font)              scaled to size 7.3pt on input line 28.
 LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
-(Font)              scaled to size 5.5pt on input line 10.
-LaTeX Font Info:    Try loading font information for T1+qhv on input line 10.
+(Font)              scaled to size 5.5pt on input line 28.
+LaTeX Font Info:    Try loading font information for T1+qhv on input line 28.
  (/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 8.46002pt on input line 10.
+(Font)              scaled to size 8.46002pt on input line 28.
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 6.86201pt on input line 10.
+(Font)              scaled to size 6.86201pt on input line 28.
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 5.17001pt on input line 10.
-\c__siunitx_mathtt_int=\count400
-LaTeX Font Info:    Try loading font information for T1+npxtt on input line 10.
+(Font)              scaled to size 5.17001pt on input line 28.
+\c__siunitx_mathtt_int=\count412
+LaTeX Font Info:    Try loading font information for T1+npxtt on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/newpx/t1npxtt.fd
 File: t1npxtt.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 9.0pt on input line 10.
+(Font)              scaled to size 9.0pt on input line 28.
 LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 7.3pt on input line 10.
+(Font)              scaled to size 7.3pt on input line 28.
 LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 5.5pt on input line 10.
+(Font)              scaled to size 5.5pt on input line 28.
  (./cover_page.tex
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -2911,22 +2957,22 @@ LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<../../figures/logos/epsrc_logo_new.pdf, id=51, 639.8796pt x 160.08809pt>
+<../../figures/logos/epsrc_logo_new.pdf, id=95, 639.8796pt x 160.08809pt>
 File: ../../figures/logos/epsrc_logo_new.pdf Graphic file (type pdf)
 <use ../../figures/logos/epsrc_logo_new.pdf>
 Package pdftex.def Info: ../../figures/logos/epsrc_logo_new.pdf  used on input line 37.
 (pdftex.def)             Requested size: 169.29684pt x 42.35474pt.
-<../../figures/logos/infomm_logo_blue.pdf, id=52, 285.065pt x 89.33376pt>
+<../../figures/logos/infomm_logo_blue.pdf, id=96, 285.065pt x 89.33376pt>
 File: ../../figures/logos/infomm_logo_blue.pdf Graphic file (type pdf)
 <use ../../figures/logos/infomm_logo_blue.pdf>
 Package pdftex.def Info: ../../figures/logos/infomm_logo_blue.pdf  used on input line 37.
 (pdftex.def)             Requested size: 145.11053pt x 45.47372pt.
-<../../figures/logos/oxford_logo_blue_long.pdf, id=53, 462.72874pt x 142.5325pt>
+<../../figures/logos/oxford_logo_blue_long.pdf, id=97, 462.72874pt x 142.5325pt>
 File: ../../figures/logos/oxford_logo_blue_long.pdf Graphic file (type pdf)
 <use ../../figures/logos/oxford_logo_blue_long.pdf>
 Package pdftex.def Info: ../../figures/logos/oxford_logo_blue_long.pdf  used on input line 37.
 (pdftex.def)             Requested size: 145.11053pt x 44.69788pt.
-<../../figures/logos/siemens-logo.pdf, id=54, 752.8125pt x 119.69719pt>
+<../../figures/logos/siemens-logo.pdf, id=98, 752.8125pt x 119.69719pt>
 File: ../../figures/logos/siemens-logo.pdf Graphic file (type pdf)
 <use ../../figures/logos/siemens-logo.pdf>
 Package pdftex.def Info: ../../figures/logos/siemens-logo.pdf  used on input line 37.
@@ -2937,7 +2983,7 @@ LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <25> not available
 (Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 25.0pt on input line 37.
-<../../figures/solar-and-wind-hybrid.jpg, id=55, 803.0pt x 446.66875pt>
+<../../figures/solar-and-wind-hybrid.jpg, id=99, 803.0pt x 446.66875pt>
 File: ../../figures/solar-and-wind-hybrid.jpg Graphic file (type jpg)
 <use ../../figures/solar-and-wind-hybrid.jpg>
 Package pdftex.def Info: ../../figures/solar-and-wind-hybrid.jpg  used on input line 37.
@@ -3001,7 +3047,7 @@ LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 \tf@toc=\write7
 \openout7 = `lay_report.toc'.
 
-<../../figures/logos/andrew_wiles_building.jpg, id=80, 227.979pt x 533.1555pt>
+<../../figures/logos/andrew_wiles_building.jpg, id=135, 227.979pt x 533.1555pt>
 File: ../../figures/logos/andrew_wiles_building.jpg Graphic file (type jpg)
 <use ../../figures/logos/andrew_wiles_building.jpg>
 Package pdftex.def Info: ../../figures/logos/andrew_wiles_building.jpg  used on input line 18.
@@ -3048,93 +3094,24 @@ LaTeX Warning: Marginpar on page ii moved.
 
 )
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 19.
+(Font)              scaled to size 10.95pt on input line 34.
 LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 19.
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 34.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 19.
-Package marginnote Info: Margin note 3.1 is on absolute page 3
-(marginnote)              on input line 21.
-Package marginnote Info: right page because not two side mode on input line 21.
+(Font)              scaled to size 10.95pt on input line 34.
+LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
+(Font)              scaled to size 9.0pt on input line 39.
+<../../figures/pouch-cell.pdf, id=144, 466.56409pt x 243.04501pt>
+File: ../../figures/pouch-cell.pdf Graphic file (type pdf)
+<use ../../figures/pouch-cell.pdf>
+Package pdftex.def Info: ../../figures/pouch-cell.pdf  used on input line 46.
+(pdftex.def)             Requested size: 352.8142pt x 183.78897pt.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 21.
-LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 21.
-LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 21.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 21.
-Package marginnote Info: xpos seems to be 170.71652pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 21.
-Package marginnote Info: Margin note 3.2 is on absolute page 3
-(marginnote)              on input line 22.
-Package marginnote Info: right page because not two side mode on input line 22.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 22.
-Package marginnote Info: xpos seems to be 170.71652pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 22.
-LaTeX Font Info:    Try loading font information for TS1+zpltlf on input line 31.
- (/usr/share/texlive/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
-File: ts1zpltlf.fd 2015/01/18 v1.0 fd file for TS1/zpltlf
-)
-LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 31.
-LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 31.
-LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 31.
-LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 4.01501pt on input line 33.
+(Font)              scaled to size 8.0pt on input line 47.
 LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <8> not available
-(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 35.
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 47.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 8.0pt on input line 35.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 41.
-Package marginnote Info: Margin note 3.3 is on absolute page 3
-(marginnote)              on input line 55.
-Package marginnote Info: right page because not two side mode on input line 55.
-LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 55.
-LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 55.
-LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 55.
-LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 5.828pt on input line 55.
-LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 8.0pt on input line 55.
-LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 6.2pt on input line 55.
-LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
-(Font)              scaled to size 8.0pt on input line 55.
-LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
-(Font)              scaled to size 6.2pt on input line 55.
-LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 55.
-LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 3.41pt on input line 55.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 55.
-See the caption package documentation for explanation.
-
-Package marginnote Info: xpos seems to be 222.01645pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 55.
-Package marginnote Info: Margin note 3.4 is on absolute page 4
-(marginnote)              on input line 78.
-Package marginnote Info: right page because not two side mode on input line 78.
-<../../figures/cover_image.png, id=89, 497.86pt x 569.12625pt>
-File: ../../figures/cover_image.png Graphic file (type png)
-<use ../../figures/cover_image.png>
-Package pdftex.def Info: ../../figures/cover_image.png  used on input line 78.
-(pdftex.def)             Requested size: 116.6563pt x 133.3539pt.
-Package marginnote Info: xpos seems to be 170.71652pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 78.
-File: ../../figures/cover_image.png Graphic file (type png)
-<use ../../figures/cover_image.png>
-Package pdftex.def Info: ../../figures/cover_image.png  used on input line 79.
-(pdftex.def)             Requested size: 246.96886pt x 282.32191pt.
+(Font)              scaled to size 8.0pt on input line 47.
 
 Overfull \hbox (59.18195pt too wide) has occurred while \output is active
  []| []
@@ -3144,80 +3121,138 @@ Overfull \hbox (59.18195pt too wide) has occurred while \output is active
 
 
 
-]
-Package marginnote Info: Margin note 4.1 is on absolute page 4
-(marginnote)              on input line 88.
-Package marginnote Info: right page because not two side mode on input line 88.
+ <../../figures/pouch-cell.pdf>]
+<../../figures/sei.png, id=189, 2231.33624pt x 950.55125pt>
+File: ../../figures/sei.png Graphic file (type png)
+<use ../../figures/sei.png>
+Package pdftex.def Info: ../../figures/sei.png  used on input line 58.
+(pdftex.def)             Requested size: 352.8142pt x 150.29279pt.
 LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 88.
-LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 88.
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/sl' in size <5.5> not available
-(Font)              size <5> substituted on input line 88.
-
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 88.
-Package marginnote Info: xpos seems to be 170.71652pt,
-(marginnote)             \marginnoteleftadjust ignored on input line 88.
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
+(Font)              scaled to size 8.0pt on input line 59.
+LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
+(Font)              scaled to size 6.2pt on input line 59.
+LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 59.
+LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
+(Font)              scaled to size 5.828pt on input line 59.
 LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 7.0pt on input line 97.
+(Font)              scaled to size 8.0pt on input line 59.
+LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
+(Font)              scaled to size 6.2pt on input line 59.
+LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
+(Font)              scaled to size 8.0pt on input line 59.
+LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
+(Font)              scaled to size 6.2pt on input line 59.
+
+Overfull \hbox (59.18195pt too wide) has occurred while \output is active
+ []| []
+ []
+
+[2 <../../figures/sei.png>]
+<../../figures/grid2.png, id=199, 858.20625pt x 945.5325pt>
+File: ../../figures/grid2.png Graphic file (type png)
+<use ../../figures/grid2.png>
+Package pdftex.def Info: ../../figures/grid2.png  used on input line 92.
+(pdftex.def)             Requested size: 246.96886pt x 272.09096pt.
+
+Overfull \hbox (59.18195pt too wide) has occurred while \output is active
+ []| []
+ []
+
+[3 <../../figures/grid2.png>]
+<../../figures/ad-hoc-spme.png, id=211, 382.45284pt x 151.18884pt>
+File: ../../figures/ad-hoc-spme.png Graphic file (type png)
+<use ../../figures/ad-hoc-spme.png>
+Package pdftex.def Info: ../../figures/ad-hoc-spme.png  used on input line 117.
+(pdftex.def)             Requested size: 352.8142pt x 139.47606pt.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 7.0pt on input line 98.
+(Font)              scaled to size 7.3pt on input line 145.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 5.0pt on input line 98.
+(Font)              scaled to size 4.01501pt on input line 145.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Overfull \hbox (59.18195pt too wide) has occurred while \output is active
  []| []
  []
 
-[2 <../../figures/cover_image.png>]
+[4 <../../figures/ad-hoc-spme.png>]
+<../../figures/experimental-fit.png, id=223, 424.9476pt x 247.1634pt>
+File: ../../figures/experimental-fit.png Graphic file (type png)
+<use ../../figures/experimental-fit.png>
+Package pdftex.def Info: ../../figures/experimental-fit.png  used on input line 169.
+(pdftex.def)             Requested size: 352.8142pt x 205.20967pt.
+LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <6.2> not available
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 170.
+LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
+(Font)              scaled to size 6.2pt on input line 170.
+LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <3.41> not available
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 170.
+LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
+(Font)              scaled to size 3.41pt on input line 170.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../../figures/map.pdf, id=226, 433.62pt x 216.81pt>
+File: ../../figures/map.pdf Graphic file (type pdf)
+<use ../../figures/map.pdf>
+Package pdftex.def Info: ../../figures/map.pdf  used on input line 178.
+(pdftex.def)             Requested size: 317.53061pt x 158.77283pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Overfull \hbox (59.18195pt too wide) has occurred while \output is active
  []| []
  []
 
-[3]
-LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 9.0pt on input line 128.
+[5]
+Overfull \hbox (59.18195pt too wide) has occurred while \output is active
+ []| []
+ []
 
-No file lay_report.bbl.
+[6 <../../figures/experimental-fit.png> <../../figures/map.pdf>]
+LaTeX Font Info:    Try loading font information for TS1+zpltlf on input line 195.
+ (/usr/share/texlive/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
+File: ts1zpltlf.fd 2015/01/18 v1.0 fd file for TS1/zpltlf
+)
+LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
+(Font)              scaled to size 9.0pt on input line 195.
 
 Overfull \hbox (59.18195pt too wide) has occurred while \output is active
  []| []
  []
 
-[4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 151.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
+[7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 215.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 215.
  (./lay_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 215.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 215.
 Package rerunfilecheck Info: File `lay_report.out' has not changed.
-(rerunfilecheck)             Checksum: 385BE3BC9EC2BBBA79F97AA927F52386;304.
+(rerunfilecheck)             Checksum: B8DECADE2F45A925AB8F1DEA48716A89;1057.
 
 
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.5pt have occurred.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 215.
  ) 
 Here is how much of TeX's memory you used:
- 40193 strings out of 492982
- 767018 string characters out of 6134896
- 939531 words of memory out of 5000000
- 42917 multiletter control sequences out of 15000+600000
- 757490 words of font info for 350 fonts, out of 8000000 for 9000
+ 39995 strings out of 492982
+ 763350 string characters out of 6134896
+ 936601 words of memory out of 5000000
+ 42763 multiletter control sequences out of 15000+600000
+ 723769 words of font info for 294 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,26n,94p,10521b,1503s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pxfonts/pxmia.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplx-bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb>
-Output written on lay_report.pdf (6 pages, 1186942 bytes).
+ 74i,22n,94p,10521b,1134s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/pxbsys.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb>
+Output written on lay_report.pdf (9 pages, 1557482 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 184 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 315 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 297 words of extra memory for PDF output out of 10000 (max. 10000000)
 
