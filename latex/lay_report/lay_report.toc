@@ -3,14 +3,14 @@
 \contentsline {subsection}{Lithium-ion pouch cells}{1}{subsection*.3}
 \contentsline {subsection}{Solid--Electrolyte Interphase (SEI) Growth}{1}{subsection*.5}
 \contentsline {subsection}{Glossary of terms}{2}{subsection*.7}
-\contentsline {subsection}{Project aims}{2}{subsection*.8}
+\contentsline {subsection}{Project aims}{3}{subsection*.8}
 \contentsline {section}{\numberline {2}Efficient models of a Lithium-ion pouch cell}{3}{section.2}
 \contentsline {subsection}{Mathematical modelling}{3}{subsection*.9}
 \contentsline {subsection}{Results}{4}{subsection*.11}
-\contentsline {subsection}{Comments}{4}{subsection*.14}
+\contentsline {subsection}{Comments}{5}{subsection*.14}
 \contentsline {section}{\numberline {3}Mathematical Modelling of the SEI}{5}{section.3}
 \contentsline {subsection}{Mathematical Analysis}{5}{subsection*.15}
 \contentsline {subsection}{Results}{5}{subsection*.16}
-\contentsline {subsection}{Comments}{5}{subsection*.19}
+\contentsline {subsection}{Comments}{6}{subsection*.19}
 \contentsline {section}{\numberline {4}Discussion, conclusions \& recommendations}{7}{section.4}
 \contentsline {section}{\numberline {5}Potential Impact}{7}{section.5}

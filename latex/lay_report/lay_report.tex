@@ -33,14 +33,15 @@
 \section{Introduction}
 \subsection{Background information}
 
-% \infommmarginnote{\dummysentences{3}}
 With the shift to vehicle electrification and renewable energy sources, lithium-ion batteries are emerging as one of the most important technologies of the 21st century. Siemens utilise lithium-ion batteries in grid-scale energy storage systems, which correct for offsets in electricity supply and demand. This in turn makes intermittent energy sources such as solar and wind viable.
 
+\infommmarginnote[-1cm]{The proper management of lithium-ion battery systems requires a quantitative understanding of degradation.}
 To properly manage such large-scale battery systems, it is essential to understand cell \emph{degradation}. A quantitative description of degradation would allow for accurate forecasting of the value of the battery system. This would then facilitate the formation of strategies for optimal usage of the system.
 
 \subsection{Lithium-ion pouch cells}
 A common format of a lithium-ion battery is the pouch cell format, displayed in \Cref{fig:pouch-cell}. The interior of the cell consists of two electrically conducting porous electrodes separated by an electrically insulating porous separator. Each electrode consists of \emph{active material} particles, presented as circles in \Cref{fig:pouch-cell}, and a \emph{binder} material, which is not shown in \Cref{fig:pouch-cell}. Within the pores of the \emph{electrode} and \emph{separators}, an liquid \emph{electrolyte} is present. The two electrodes are sandwiched between two electrically conducting \emph{current collectors} which have tabs at the top to allow for an easy connection to an external circuit.
 
+\infommmarginnote[2cm]{Lithium-ion batteries consits of two separated porous electrodes within an electrolyte.}
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{pouch-cell.pdf}
@@ -51,8 +52,10 @@ A common format of a lithium-ion battery is the pouch cell format, displayed in 
 When a lithium-ion cell is discharged by connecting the two tabs to an external circuit, lithium \emph{intercalated} in the active material of the negative electrode travels to the surface of the active material where an electrochemical reaction occurs. This reaction converts intercalated lithium into lithium ions contained in the electrolyte and electrons contained in the negative electrode. The lithium-ions then travel through the electrolyte to the surface of the positive active material particles where they recombine with an electron to form lithium intercalated in the positive active material. During charge, the process occurs in reverse, driven by an applied voltage.
 
 \subsection{Solid--Electrolyte Interphase (SEI) Growth}
-SEI growth is one of the dominate degradation mechanisms occurring within lithium-ion batteries. The SEI is a layer that forms on the surface of the negative active material particles as a result of the occurrence of parasitic side reactions. In \Cref{fig:sei}, we present a schematic of the structure of the SEI and the side reaction which creates new SEI. The SEI consists of two layers, a dense inner layer and a porous outer layer. In the creation of SEI, electrons within the negative electrode travel through the dense inner layer whilst lithium ions and \emph{solvent} molecules from the electrolyte travel through the pores of the outer SEI. These three species then combine through and electrochemical reaction at the surface of the inner and outer SEI to form fresh SEI. Since the growth of SEI consumes lithium ions, cyclable lithium is lost from the battery which results in capacity fade. In the presence of SEI, lithium ions can still intercalate into the negative active material. However, since they now have to travel through the inner SEI, there is an increased resistance to this process. This results in increased internal resistances within the cell which make the cell less efficient.
+\infommmarginnote[-1.3em]{SEI growth is a key degradation mechanism.}
+SEI growth is one of the dominate degradation mechanisms occurring within lithium-ion batteries. The SEI is a layer that forms on the surface of the negative active material particles as a result of the occurrence of parasitic side reactions. In \Cref{fig:sei}, we present a schematic of the structure of the SEI and the side reaction which creates new SEI. The SEI consists of two layers, a dense inner layer and a porous outer layer. In the creation of SEI, electrons within the negative electrode travel through the dense inner layer whilst lithium ions and \emph{solvent} molecules from the electrolyte travel through the pores of the outer SEI. These three species then combine through an electrochemical reaction at the surface of the inner and outer SEI to form fresh SEI. Since the growth of SEI consumes lithium ions, cyclable lithium is lost from the battery which results in capacity fade. In the presence of SEI, lithium ions can still intercalate into the negative active material. However, since they now have to travel through the inner SEI, there is increased resistance to this process. This results in increased internal resistances within the cell which make the cell less efficient.
 
+\infommmarginnote[1.5cm]{The SEI consists of a dense inner layer and a porous outer layer and is formed through parasitic side reactions.}
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{sei.png}
@@ -71,12 +74,14 @@ SEI growth is one of the dominate degradation mechanisms occurring within lithiu
 	\litem{Electrode} An electrically conducting material consisting of active material and binder.
 	\litem{Electrolyte} An ionically conducting material consisting of positively and negatively charged ionic species within a neutral solvent.
 	\litem{Intercalation} The process in which an atom is inserted into a layered material such as graphite.
-	\litem{Asymptotic Methods} A set of mathematical methods for describing the behaviour of a system in a particular limit (e.g. as a parameter tends to zero).These methods can be used to gain good approximate solutions when certain parameters are either large or small.
-	\litem{State of Charge (SoC)} How charged the cell is. If SoC is 1 then cell is fully charged. If SoC is 0 then cell is fully discharged.
+	\litem{Asymptotic Methods} A set of mathematical methods for describing the behaviour of a system in a particular limit (e.g. as a parameter tends to zero). These methods can be used to gain good approximate solutions when certain parameters are either large or small.
+	\litem{State of Charge (SoC)} How charged the cell is. If SoC is 1 then the cell is fully charged. If SoC is 0 then the cell is fully discharged.
 \end{infommitemize}
 
+\newpage
 \subsection{Project aims}
-The degradation of lithium-ion batteries is highly complex with many little understood mechanisms occurring simultaneously. To fully understand the effects of these mechanisms, they must be incorporated into a model of a full lithium-ion pouch cell. Since degradation occurs over many cycles and over very long time periods, it is essential to first develop mathematical models of pouch cells which can simulate long-term effects in an efficient manner. Once this framework is in place, in-depth analysis of the individual degradation mechanisms should be performed and the resulting models incorporated into the efficient full cell models. Here, we shall focus on one of key degradation mechanisms, the growth of the SEI. Therefore, the two key aims of this project are
+\infommmarginnote{We aim to develop efficient models of lithium-ion batteries and SEI growth.}
+The degradation of lithium-ion batteries is highly complex with many little-understood mechanisms occurring simultaneously. To fully understand the effects of these mechanisms, they must be incorporated into a model of a full lithium-ion pouch cell. Since degradation occurs over many cycles and over very long time periods, it is essential to first develop mathematical models of pouch cells which can efficiently simulate long-term effects. Once this framework is in place, in-depth analysis of the individual degradation mechanisms should be performed and the resulting models incorporated into the efficient full cell models. Here, we shall focus on one of the key degradation mechanisms, the growth of the SEI. Therefore, the two key aims of this project are
 \begin{infommitemize}
 	\item Develop efficient mathematical models of a full lithium-ion pouch cell
 	\item Develop a mathematical model of SEI growth
@@ -85,7 +90,8 @@ The degradation of lithium-ion batteries is highly complex with many little unde
 \section{Efficient models of a Lithium-ion pouch cell}
 
 \subsection{Mathematical modelling}
-We develop a full three-dimensional mathematical model of a lithium-ion pouch cell as follows. To model the flow of electrons in the current collectors and electrodes, we enforce conservation of charge and employ Ohm's law. In the active material particles, we consider conservation of mass and assume lithium is transported down gradients in lithium. In the electrolyte, we enforce conservation of mass for both the positive and negative ionic species. The electrochemical reactions are modelled using the phenomenological Butler--Volmer relations. Finally, we account for thermal effects by employing an energy conservation equation and accounting for Ohmic and reaction heat sources.
+\infommmarginnote{We first develop a detailed physics-based model of a lithium-ion battery.}
+We develop a full three-dimensional mathematical model of a lithium-ion pouch cell as follows. To model the flow of electrons in the current collectors and electrodes, we enforce conservation of charge and employ Ohm's law. In the active material particles, we consider conservation of mass and assume lithium is transported down gradients in lithium. In the electrolyte, we enforce the conservation of mass for both the positive and negative ionic species. The electrochemical reactions are modelled using the phenomenological Butler--Volmer relations. Finally, we account for thermal effects by employing an energy conservation equation and accounting for Ohmic and reaction heat sources.
 
 \begin{figure}[h]
 	\centering
@@ -106,12 +112,15 @@ We develop a full three-dimensional mathematical model of a lithium-ion pouch ce
 	\label{fig:suite}
 \end{figure}
 
-This model is very detailed and too computationally expensive for the study of long-term degradation. We therefore adopt \emph{asymptotic methods} to systematically simplify this model. There are two key parameters that we take advantage of to simplify the model. The first is the \emph{aspect ratio} of the cell, that is the cell is much taller and wider than it is thick (in the through-cell direction). The second parameter is the ratio of the typical timescale for diffusion in the electrolyte to the typical discharge time. Typically the discharge timescale is around an hour whereas the electrolyte diffusion timescale is only around a minute. By considering different combinations of asymptotic limits of these two parameter, we develop the suite of reduced-order models of a lithium-ion pouch cell presented in \Cref{fig:suite}.
+\infommmarginnote[-6.5em]{We use asymptotic methods to simplify this model taking into account the cell geometry and the timescales of key physical processes within the cell.}
+This model is very detailed and too computationally expensive for the study of long-term degradation. We therefore adopt \emph{asymptotic methods} to systematically simplify this model. There are two key parameters that we take advantage of to simplify the model. The first is the \emph{aspect ratio} of the cell, that is the cell is much taller and wider than it is thick (in the through-cell direction). The second parameter is the ratio of the typical timescale for diffusion in the electrolyte to the typical discharge time. Typically the discharge timescale is around an hour whereas the electrolyte diffusion timescale is only around a minute. By considering different combinations of asymptotic limits of these two parameters, we develop the suite of reduced-order models of a lithium-ion pouch cell presented in \Cref{fig:suite}.
 
-\Cref{fig:suite} can be understood as follows. In the top left, we present the most complex reduced model that is derived from an asymptotic limit in the aspect ratio. Instead of a full three-dimensional cell model, this model consists of two-dimensional models for the current collectors coupled to a detailed one-dimensional through-cell model at every point. By proceeding downward in \Cref{fig:suite}, we take further advantage of the aspect ratio. In the bottom left, the current collectors behave uniformly and the model is reduced to a single one-dimensional through-cell model. In the middle row on the left, an ``in-between'' model is develop which accounts for some of the higher dimensional effects but maintains much of the simplicity of the one-dimensional model. Proceeding from left to right, simplifications are made by taking advantage of the ratio of the electrolyte diffusion and discharge timescales. In the top right, all the active material particles behave in the same way and so only one representative particle must be solved for in each electrode. At the top of the middle column, and `in-between' model is developed that accounts for some of the more complex effects in the through-cell direction but maintains much of the computational simplicity of the model in the top right. The other models are then different combinations of these two sets of simplifications.
+\infommmarginnote[1.5cm]{Different combinations of asymptotic simplifications give rise to different simplified models.}
+\Cref{fig:suite} can be understood as follows. In the top left, we present the most complex reduced model that is derived from an asymptotic limit in the aspect ratio. Instead of a full three-dimensional cell model, this model consists of two-dimensional models for the current collectors coupled to a detailed one-dimensional through-cell model at every point. By proceeding downward in \Cref{fig:suite}, we take further advantage of the aspect ratio. In the bottom left, the current collectors behave uniformly and the model is reduced to a single one-dimensional through-cell model. In the middle row on the left, an ``in-between'' model is developed which accounts for some of the higher dimensional effects but maintains much of the simplicity of the one-dimensional model. Proceeding from left to right, simplifications are made by taking advantage of the ratio of the electrolyte diffusion and discharge timescales. In the top right, all the active material particles behave in the same way and so only one representative particle must be solved for in each electrode. At the top of the middle column, and `in-between' model is developed that accounts for some of the more complex effects in the through-cell direction but maintains much of the computational simplicity of the model in the top right. The other models are then different combinations of these two sets of simplifications.
 
 \subsection{Results}
 We first compared the predictions of key output variables that our asymptotically reduced models make with those of ad-hoc reduced models of similar complexity from literature. The results for the SPMe model (middle column, bottom row of \Cref{fig:suite}) are presented in \Cref{fig:errors}. We found that our models outperform those in the literature in terms of accuracy and are equivalent in terms of computational time across all operating currents. Following these results, we identified the terms in the ad-hoc models that gave rise to greater errors.
+\infommmarginnote[1.8cm]{Our simplified models perform better than others from the literature.}
 \begin{figure}[h]
 	\centering
 	\begin{overpic}[width=\textwidth]{ad-hoc-spme.png}
@@ -124,7 +133,7 @@ We first compared the predictions of key output variables that our asymptoticall
 	\label{fig:errors}
 \end{figure}
 
-We also conducted a full numerical comparison of each of the models in \Cref{fig:suite} and condensed these results into a single table. A simplified version of this table is presented in \Cref{tab:summary-table}. This table presents the solve speed, memory requirements, and the accuracy of it's prediction of key internal cell variables such as the electric potentials, lithium concentrations, cell temperature, and cell voltage. This table allows one to select a model of appriate fidelity for a particular application. In particular, we identify the SPMeCC as a fast model, with low memory requirements, an a moderate performance at recovering the key cell variables required as inputs in studies of degradation. Therefore, the SPMeCC is a good model to adopt for studying degradation of lithium-ion batteries.
+We also conducted a full numerical comparison of each of the models in \Cref{fig:suite} and condensed these results into a single table. A simplified version of this table is presented in \Cref{tab:summary-table}. This table presents the solve speed, memory requirements, and the accuracy of its prediction of key internal cell variables such as electric potentials, lithium concentrations, cell temperature, and cell voltage. This table allows one to select a model of appropriate fidelity for a particular application. In particular, we identify the SPMeCC as a fast model, with low memory requirements, and a moderate performance at recovering the key cell variables required as inputs in studies of degradation. Therefore, the SPMeCC is a good model to adopt for studying the degradation of lithium-ion batteries.
 
 \begin{table}[h]
     \centering
@@ -147,19 +156,23 @@ We also conducted a full numerical comparison of each of the models in \Cref{fig
     \label{tab:summary-table}
 \end{table}
 
+\newpage
 
+\infommmarginnote[-5cm]{We provide a simplified model recommendation subject to user requirements.}
 \subsection{Comments}
 \begin{infommitemize}
 	\item Developed a detailed model of a lithium-ion pouch cell
-	\item Employed asymptotic methods to derive a suite of reduced order models from this detailed model
+	\item Employed asymptotic methods to derive a suite of reduced-order models from this detailed model
 	\item Provided a full numerical comparison and recommendation of appropriate fidelity model for studying degradation.
 \end{infommitemize}
 
 \section{Mathematical Modelling of the SEI}
 \subsection{Mathematical Analysis}
+\infommmarginnote{We developed a detailed model of the SEI.}
 Within the inner SEI we considered the transport of species: lithium-ions and electrons. For each species, we enforced conservation of mass and took each species to be driven down gradients in concentration and also to be driven by gradients in the electric potentials because the species are both electrically charged. We then employed the phenomenological Butler--Volmer relations to model the reactions occurring on the interface between the active material and inner SEI as well as the reactions occurring on the interface between the inner SEI and outer SEI.
 
-This model is too detailed to be incorporated into a model of a full lithium-ion cell and also contains a large number of unknown parameters. To simplify this model, we again employed asymptotic methods. In this case, we considered a limit in which the timescale for diffusion of electrons through the SEI was long relative to the timescales of the reactions involving electrons. We also took the limit in which the timescale of lithium intercalation reaction at the active material--inner SEI interface was long compared to the timescale for diffusion of lithium-ions through the inner SEI and the timescale of the reaction at the inner SEI--outer SEI interface. We compared this simplified model with the full model and found excellent agreement between the two for appropriate parameter values.
+\infommmarginnote{We simplified this model by employing asympotic methods and found excellent agreement between the full and simple models.}
+This model is too detailed to be incorporated into a model of a full lithium-ion cell and also contains a large number of unknown parameters. To simplify this model, we again employed asymptotic methods. In this case, we considered a limit in which the timescale for the diffusion of electrons through the SEI was long relative to the timescales of the reactions involving electrons. We also took the limit in which the timescale of lithium intercalation reaction at the active material--inner SEI interface was long compared to the timescale for the diffusion of lithium-ions through the inner SEI and the timescale of the reaction at the inner SEI--outer SEI interface. We compared this simplified model with the full model and found excellent agreement between the two for appropriate parameter values.
 
 \subsection{Results}
 We took our simplified SEI model and compared it with experimental capacity fade data. In the experiment lithium-ion cells were stored at different \emph{States-of-charge} (SoC) and temperatures. The capacity of the cells were then checked after 1.9 months, 3.8 months, 6.5 months, and 9.5 month. Firstly, at lower SoC, we expect that additional degradations cause capacity fade in the lithium-ion cell. However, for SoC greater than 0.2, we observe excellent agreement between our model and the experimental data. In particular, our model captures well the temperature, SoC, and temporal dependence of capacity fade.
@@ -172,7 +185,9 @@ We took our simplified SEI model and compared it with experimental capacity fade
 \end{figure}
 
 After validating our SEI model against experimental data, we incorporated into the SPM, the simplest of the full cell models in \Cref{fig:suite}. We studied then used this model to study SEI growth under dynamic loads. From this study, we developed a map of `safe' and `dangerous' operating conditions for degradation. This map is presented in \Cref{fig:degradation-map}. We observe that degradation occurs most at high SoCs and during charging of a cell and least at low SoCs and during a discharge.
+\infommmarginnote[-8cm]{Our simple SEI model captures the temperature, SoC, and temporal dependence of capacity fade.}
 
+\infommmarginnote[2cm]{We provided a map of SEI growth across different operating conditions.}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{map.pdf}
@@ -183,7 +198,7 @@ After validating our SEI model against experimental data, we incorporated into t
 
 \subsection{Comments}
 \begin{infommitemize}
-	\item Developed detailed model of SEI and used asymptotic methods to simplify this model.
+	\item Developed a detailed model of SEI and used asymptotic methods to simplify this model.
 	\item Found excellent agreement between SEI model and experimental capacity fade data.
 	\item Incorporated SEI model into a model of a full lithium-ion cell and determined `safe' and `dangerous' operating conditions for degradation.
 \end{infommitemize}
@@ -195,15 +210,20 @@ We have tackled the problem of degradation in lithium-ion batteries by addressin
 	\item Develop efficient mathematical models of full lithium-ion cells.
 	\item Develop an accurate model of SEI growth.
 \end{itemize}
+\infommmarginnote[-1em]{The SPMeCC is a good model of a lithium-ion cell for studying degradation.}
 For the first challenge, we developed a detailed mathematical model of a full lithium-ion pouch cell and then used asymptotic methods to develop a suite of simplified models. We found that our models outperformed those of similar complexity in the literature. We also performed a full numerical comparison of all of these models and found that the SPMeCC is a good choice of model for studying degradation.
 
+\infommmarginnote[2em]{SEI growth is worst at high SoC and during charging.}
 For the second challenge, we developed a detailed model of SEI growth and then employed asymptotic methods to develop a simplified model that agreed well with the detailed model. We then compared this simple model with experimental capacity fade data and found excellent agreement. After validating this model, we then incorporated into a full model of a lithium-ion cell and developed a map of operating conditions and their relative rates of degradation. We found that the highest rates of degradation occur during charging and a low SoCs.
 
 
 \section{Potential Impact}
+\infommmarginnote{All models have been implemented in an easy-to-use software package for company to use. \\[1em]
+Models can be used to efficiently simulate degradation due to SEI growth and can be easily extended to account for other mechanisms.
+}
 All of the models developed during this project have been implemented within an open-source easy-to-use battery modelling package called PyBaMM (Python Battery Mathematical Modelling). Coupled with the model comparisons in \Cref{tab:summary-table}, this provides an excellent resource for other battery researchers and Siemens to employ. Further, the models have all been implemented in a modular fashion so that additional degradation mechanisms can be easily incorporated into the framework removing duplicate work across institutions and accelerating battery modelling research in general. Siemens are planning to interface PyBaMM with internal software to take advantage of the modular framework and efficient mathematical models developed during this project.
 
-[Insert name], [Job title + company] said: ``\emph{\dummysentences{5}}''
+Ian Wilkinson, Programme Manager at Siemens said: ``\emph{Scott's work applying advanced mathematical techniques to the modelling of lithium-ion batteries has proved very successful. The suite of efficient mathematical models of lithium-ion cells that Scott has developed dramatically cuts down computation time in studying degradation whilst retaining accuracy. By implementing his work within PyBaMM, he has made it easily accessible to others, which is helping accelerate research in this area. Siemens is also looking into interfacing PyBaMM with its own computational software to leverage the benefits of Scott's work.}''
 
 % Add the bibliography.
 % \begin{small}
